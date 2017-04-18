@@ -11,19 +11,11 @@
 		F824D9F91EA5F8160098B2FE /* LLBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F824D9F81EA5F8160098B2FE /* LLBaseHandler.m */; };
 		F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F824D9FD1EA5F8C50098B2FE /* AppDelegate.m */; };
 		F824DA001EA5F8C50098B2FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F824D9FE1EA5F8C50098B2FE /* main.m */; };
-		F824DA1B1EA5FBBF0098B2FE /* DZCover.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA031EA5FBBF0098B2FE /* DZCover.m */; };
-		F824DA1C1EA5FBBF0098B2FE /* DZPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA051EA5FBBF0098B2FE /* DZPopMenu.m */; };
-		F824DA1D1EA5FBBF0098B2FE /* DZPopMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F824DA061EA5FBBF0098B2FE /* DZPopMenu.xib */; };
-		F824DA1E1EA5FBBF0098B2FE /* DZTouUpCashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA081EA5FBBF0098B2FE /* DZTouUpCashButton.m */; };
-		F824DA1F1EA5FBBF0098B2FE /* NSArray+LOG.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA0A1EA5FBBF0098B2FE /* NSArray+LOG.m */; };
-		F824DA201EA5FBBF0098B2FE /* NSArray+Sudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA0C1EA5FBBF0098B2FE /* NSArray+Sudoku.m */; };
-		F824DA211EA5FBBF0098B2FE /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA0E1EA5FBBF0098B2FE /* NSDictionary+Log.m */; };
 		F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */; };
 		F824DA231EA5FBBF0098B2FE /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA121EA5FBBF0098B2FE /* UIImage+Extension.m */; };
 		F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA141EA5FBBF0098B2FE /* UILabel+DZAutoSize.m */; };
 		F824DA251EA5FBBF0098B2FE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */; };
 		F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */; };
-		F824DA271EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA1A1EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.m */; };
 		F8C6C66E1EA5E22500CB1680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C66C1EA5E22500CB1680 /* Main.storyboard */; };
 		F8C6C6701EA5E22500CB1680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */; };
 		F8C6C6731EA5E22500CB1680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C6711EA5E22500CB1680 /* LaunchScreen.storyboard */; };
@@ -61,19 +53,6 @@
 		F824D9FC1EA5F8C50098B2FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F824D9FD1EA5F8C50098B2FE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F824D9FE1EA5F8C50098B2FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F824DA021EA5FBBF0098B2FE /* DZCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZCover.h; sourceTree = "<group>"; };
-		F824DA031EA5FBBF0098B2FE /* DZCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZCover.m; sourceTree = "<group>"; };
-		F824DA041EA5FBBF0098B2FE /* DZPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPopMenu.h; sourceTree = "<group>"; };
-		F824DA051EA5FBBF0098B2FE /* DZPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPopMenu.m; sourceTree = "<group>"; };
-		F824DA061EA5FBBF0098B2FE /* DZPopMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZPopMenu.xib; sourceTree = "<group>"; };
-		F824DA071EA5FBBF0098B2FE /* DZTouUpCashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTouUpCashButton.h; sourceTree = "<group>"; };
-		F824DA081EA5FBBF0098B2FE /* DZTouUpCashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTouUpCashButton.m; sourceTree = "<group>"; };
-		F824DA091EA5FBBF0098B2FE /* NSArray+LOG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LOG.h"; sourceTree = "<group>"; };
-		F824DA0A1EA5FBBF0098B2FE /* NSArray+LOG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LOG.m"; sourceTree = "<group>"; };
-		F824DA0B1EA5FBBF0098B2FE /* NSArray+Sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sudoku.h"; sourceTree = "<group>"; };
-		F824DA0C1EA5FBBF0098B2FE /* NSArray+Sudoku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sudoku.m"; sourceTree = "<group>"; };
-		F824DA0D1EA5FBBF0098B2FE /* NSDictionary+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
-		F824DA0E1EA5FBBF0098B2FE /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
 		F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -84,8 +63,6 @@
 		F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		F824DA171EA5FBBF0098B2FE /* UIView+ZUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZUtility.h"; sourceTree = "<group>"; };
 		F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZUtility.m"; sourceTree = "<group>"; };
-		F824DA191EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
-		F824DA1A1EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		F8C6C6601EA5E22500CB1680 /* AttendanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C6C66D1EA5E22500CB1680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,19 +127,6 @@
 		F824DA011EA5FBBF0098B2FE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				F824DA021EA5FBBF0098B2FE /* DZCover.h */,
-				F824DA031EA5FBBF0098B2FE /* DZCover.m */,
-				F824DA041EA5FBBF0098B2FE /* DZPopMenu.h */,
-				F824DA051EA5FBBF0098B2FE /* DZPopMenu.m */,
-				F824DA061EA5FBBF0098B2FE /* DZPopMenu.xib */,
-				F824DA071EA5FBBF0098B2FE /* DZTouUpCashButton.h */,
-				F824DA081EA5FBBF0098B2FE /* DZTouUpCashButton.m */,
-				F824DA091EA5FBBF0098B2FE /* NSArray+LOG.h */,
-				F824DA0A1EA5FBBF0098B2FE /* NSArray+LOG.m */,
-				F824DA0B1EA5FBBF0098B2FE /* NSArray+Sudoku.h */,
-				F824DA0C1EA5FBBF0098B2FE /* NSArray+Sudoku.m */,
-				F824DA0D1EA5FBBF0098B2FE /* NSDictionary+Log.h */,
-				F824DA0E1EA5FBBF0098B2FE /* NSDictionary+Log.m */,
 				F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */,
 				F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */,
 				F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */,
@@ -173,8 +137,6 @@
 				F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */,
 				F824DA171EA5FBBF0098B2FE /* UIView+ZUtility.h */,
 				F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */,
-				F824DA191EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.h */,
-				F824DA1A1EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -411,7 +373,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F824DA1D1EA5FBBF0098B2FE /* DZPopMenu.xib in Resources */,
 				F8C6C6731EA5E22500CB1680 /* LaunchScreen.storyboard in Resources */,
 				F8C6C6701EA5E22500CB1680 /* Assets.xcassets in Resources */,
 				F8C6C66E1EA5E22500CB1680 /* Main.storyboard in Resources */,
@@ -488,22 +449,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F824DA251EA5FBBF0098B2FE /* UIView+Extension.m in Sources */,
-				F824DA1F1EA5FBBF0098B2FE /* NSArray+LOG.m in Sources */,
 				F8C6C6A01EA5E3A300CB1680 /* AFHttpClient.m in Sources */,
 				F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */,
 				F8C6C6A11EA5E3A300CB1680 /* LLURLHelper.m in Sources */,
 				F824D9F91EA5F8160098B2FE /* LLBaseHandler.m in Sources */,
-				F824DA1B1EA5FBBF0098B2FE /* DZCover.m in Sources */,
-				F824DA211EA5FBBF0098B2FE /* NSDictionary+Log.m in Sources */,
-				F824DA1E1EA5FBBF0098B2FE /* DZTouUpCashButton.m in Sources */,
 				F824DA231EA5FBBF0098B2FE /* UIImage+Extension.m in Sources */,
 				F824DA001EA5F8C50098B2FE /* main.m in Sources */,
 				F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */,
 				F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */,
-				F824DA271EA5FBBF0098B2FE /* UIViewController+BackButtonHandler.m in Sources */,
-				F824DA1C1EA5FBBF0098B2FE /* DZPopMenu.m in Sources */,
 				F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */,
-				F824DA201EA5FBBF0098B2FE /* NSArray+Sudoku.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
