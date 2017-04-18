@@ -1,0 +1,79 @@
+//
+//  PrefixHeader.pch
+//  ArkenstoneOC
+//
+//  Created by FN on 2016/10/10.
+//  Copyright © 2016年 F. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+ZUtility.h"
+#import <YYModel/YYModel.h>
+#import <MJRefresh/MJRefresh.h>
+#import <Masonry/Masonry.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "UIColor+expanded.h"
+#import "ProgressHUD.h"
+//#define base_url  @"http://10.3.41.48:8080"
+
+#define kkAppVersion @"4.0.3"
+#define kkAppGiftVersion @"7"
+
+//日志输出
+#ifdef DEBUG  //调试阶段
+#define WDLog(...) NSLog(__VA_ARGS__)
+#else //发布阶段
+#define WDLog(...)
+#endif
+
+//高德地图key
+#define mapKey @"c2b349d857ab2a84fa374f4d9430cdaa"
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScale  kScreenWidth/375
+//屏幕适配
+#define RELATIVE_WIDTH(A) (([UIScreen mainScreen].bounds.size.width)*((A)/375.0))
+//颜色
+//顶部背景的白色 #ffffff
+#define kBackgroundColor [UIColor colorWithRed: 255/255.0 green:255/255.0 blue:255/255.0 alpha:1]
+//按钮／底部tabbar的绿色 #59c775
+#define kGreenColor [UIColor colorWithRed: 89/255.0 green:199/255.0 blue:117/255.0 alpha:1]
+//首页中间隔的灰色 #eeeeee
+#define kGreyColor [UIColor colorWithRed: 238/255.0 green:238/255.0 blue:238/255.0 alpha:1]
+//黑色的字体--标题 #202020
+#define kBlackTitleColor [UIColor colorWithRed: 32/255.0 green:32/255.0 blue:32/255.0 alpha:1]
+//浅黑色 正文 #727171
+#define klightBlackTitleColor [UIColor colorWithRed: 114/255.0 green:113/255.0 blue:113/255.0 alpha:1]
+//浅黑色 次要文字 #d7d7d7
+#define klightBlackSubtitleColor [UIColor colorWithRed: 215/255.0 green:215/255.0 blue:215/255.0 alpha:1]
+//特殊文字颜色 fdb15f
+#define kYellowColor [UIColor colorWithHexString:@"fdb15f"]
+
+//随即色
+#define kColor  [UIColor colorWithRed:((float)arc4random_uniform(256)/255) green:((float)arc4random_uniform(256)/255) blue:((float)arc4random_uniform(256)/255) alpha:1]
+
+#define Main_Font [UIFont systemFontOfSize:14]
+#define Min_Font [UIFont systemFontOfSize:12]
+
+//RGBA 例子：rgbValue = 0x727171
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//RGBA
+#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a] 
+
+//提示框
+#define MBProgressAlert(view,content) ({\
+MBProgressHUD * hub = [MBProgressHUD showHUDAddedTo:view animated:YES];\
+hub.mode = MBProgressHUDModeText;\
+[hub sizeToFit];\
+hub.label.text = content;\
+hub.removeFromSuperViewOnHide = YES;\
+hub.tintColor = [[UIColor colorWithHexString:@"59c775"] colorWithAlphaComponent:1.0];\
+[hub hideAnimated:YES afterDelay:1.0];\
+})
+#endif /* PrefixHeader_pch */
