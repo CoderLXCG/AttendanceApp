@@ -16,6 +16,27 @@
 		F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA141EA5FBBF0098B2FE /* UILabel+DZAutoSize.m */; };
 		F824DA251EA5FBBF0098B2FE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */; };
 		F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */; };
+		F82FDD2D1EA859170042664C /* LXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD2C1EA859170042664C /* LXActionSheet.m */; };
+		F82FDD311EA85E8E0042664C /* DZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD301EA85E8E0042664C /* DZMainViewController.m */; };
+		F82FDD341EA861280042664C /* DZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD331EA861280042664C /* DZNavigationController.m */; };
+		F82FDD371EA8864B0042664C /* UIImage+DZIamge.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD361EA8864B0042664C /* UIImage+DZIamge.m */; };
+		F82FDD441EA89C420042664C /* GFCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD3B1EA89C420042664C /* GFCalendarCell.m */; };
+		F82FDD451EA89C420042664C /* GFCalendarMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD3D1EA89C420042664C /* GFCalendarMonth.m */; };
+		F82FDD461EA89C420042664C /* GFCalendarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD3F1EA89C420042664C /* GFCalendarScrollView.m */; };
+		F82FDD471EA89C420042664C /* GFCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD411EA89C420042664C /* GFCalendarView.m */; };
+		F82FDD481EA89C420042664C /* NSDate+GFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD431EA89C420042664C /* NSDate+GFCalendar.m */; };
+		F82FDD4B1EA89D110042664C /* DZDayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD4A1EA89D110042664C /* DZDayDetailViewController.m */; };
+		F82FDD4E1EA8B00C0042664C /* DZClockInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD4D1EA8B00C0042664C /* DZClockInViewController.m */; };
+		F82FDD551EA8BAE90042664C /* QRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD521EA8BAE90042664C /* QRCodeScanningVC.m */; };
+		F82FDD561EA8BAE90042664C /* ScanSuccessJumpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD541EA8BAE90042664C /* ScanSuccessJumpVC.m */; };
+		F82FDD6B1EA8BB840042664C /* UIImage+SGHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD5A1EA8BB840042664C /* UIImage+SGHelper.m */; };
+		F82FDD6C1EA8BB840042664C /* SGQRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD5D1EA8BB840042664C /* SGQRCodeScanningVC.m */; };
+		F82FDD6D1EA8BB840042664C /* SGQRCodeScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD601EA8BB840042664C /* SGQRCodeScanningView.m */; };
+		F82FDD6E1EA8BB840042664C /* SGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD621EA8BB840042664C /* SGWebView.m */; };
+		F82FDD6F1EA8BB840042664C /* SGQRCodeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD651EA8BB840042664C /* SGQRCodeConst.m */; };
+		F82FDD701EA8BB840042664C /* SGQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F82FDD661EA8BB840042664C /* SGQRCode.bundle */; };
+		F82FDD711EA8BB840042664C /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */; };
+		F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F863378F1EA84D9600C75420 /* DZLoginViewController.m */; };
 		F8C6C66E1EA5E22500CB1680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C66C1EA5E22500CB1680 /* Main.storyboard */; };
 		F8C6C6701EA5E22500CB1680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */; };
 		F8C6C6731EA5E22500CB1680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C6711EA5E22500CB1680 /* LaunchScreen.storyboard */; };
@@ -52,7 +73,7 @@
 		F824D9FB1EA5F89D0098B2FE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../Main/PrefixHeader.pch; sourceTree = "<group>"; };
 		F824D9FC1EA5F8C50098B2FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F824D9FD1EA5F8C50098B2FE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F824D9FE1EA5F8C50098B2FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F824D9FE1EA5F8C50098B2FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Main/main.m; sourceTree = "<group>"; };
 		F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
 		F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -63,6 +84,49 @@
 		F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		F824DA171EA5FBBF0098B2FE /* UIView+ZUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZUtility.h"; sourceTree = "<group>"; };
 		F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZUtility.m"; sourceTree = "<group>"; };
+		F82FDD2B1EA859170042664C /* LXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXActionSheet.h; sourceTree = "<group>"; };
+		F82FDD2C1EA859170042664C /* LXActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXActionSheet.m; sourceTree = "<group>"; };
+		F82FDD2F1EA85E8E0042664C /* DZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMainViewController.h; sourceTree = "<group>"; };
+		F82FDD301EA85E8E0042664C /* DZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMainViewController.m; sourceTree = "<group>"; };
+		F82FDD321EA861280042664C /* DZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNavigationController.h; sourceTree = "<group>"; };
+		F82FDD331EA861280042664C /* DZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNavigationController.m; sourceTree = "<group>"; };
+		F82FDD351EA8864B0042664C /* UIImage+DZIamge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DZIamge.h"; sourceTree = "<group>"; };
+		F82FDD361EA8864B0042664C /* UIImage+DZIamge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DZIamge.m"; sourceTree = "<group>"; };
+		F82FDD391EA89C420042664C /* GFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendar.h; sourceTree = "<group>"; };
+		F82FDD3A1EA89C420042664C /* GFCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarCell.h; sourceTree = "<group>"; };
+		F82FDD3B1EA89C420042664C /* GFCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarCell.m; sourceTree = "<group>"; };
+		F82FDD3C1EA89C420042664C /* GFCalendarMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarMonth.h; sourceTree = "<group>"; };
+		F82FDD3D1EA89C420042664C /* GFCalendarMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarMonth.m; sourceTree = "<group>"; };
+		F82FDD3E1EA89C420042664C /* GFCalendarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarScrollView.h; sourceTree = "<group>"; };
+		F82FDD3F1EA89C420042664C /* GFCalendarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarScrollView.m; sourceTree = "<group>"; };
+		F82FDD401EA89C420042664C /* GFCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarView.h; sourceTree = "<group>"; };
+		F82FDD411EA89C420042664C /* GFCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarView.m; sourceTree = "<group>"; };
+		F82FDD421EA89C420042664C /* NSDate+GFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GFCalendar.h"; sourceTree = "<group>"; };
+		F82FDD431EA89C420042664C /* NSDate+GFCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GFCalendar.m"; sourceTree = "<group>"; };
+		F82FDD491EA89D110042664C /* DZDayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZDayDetailViewController.h; sourceTree = "<group>"; };
+		F82FDD4A1EA89D110042664C /* DZDayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZDayDetailViewController.m; sourceTree = "<group>"; };
+		F82FDD4C1EA8B00C0042664C /* DZClockInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZClockInViewController.h; sourceTree = "<group>"; };
+		F82FDD4D1EA8B00C0042664C /* DZClockInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZClockInViewController.m; sourceTree = "<group>"; };
+		F82FDD511EA8BAE90042664C /* QRCodeScanningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanningVC.h; sourceTree = "<group>"; };
+		F82FDD521EA8BAE90042664C /* QRCodeScanningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanningVC.m; sourceTree = "<group>"; };
+		F82FDD531EA8BAE90042664C /* ScanSuccessJumpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSuccessJumpVC.h; sourceTree = "<group>"; };
+		F82FDD541EA8BAE90042664C /* ScanSuccessJumpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSuccessJumpVC.m; sourceTree = "<group>"; };
+		F82FDD591EA8BB840042664C /* UIImage+SGHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SGHelper.h"; sourceTree = "<group>"; };
+		F82FDD5A1EA8BB840042664C /* UIImage+SGHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SGHelper.m"; sourceTree = "<group>"; };
+		F82FDD5C1EA8BB840042664C /* SGQRCodeScanningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanningVC.h; sourceTree = "<group>"; };
+		F82FDD5D1EA8BB840042664C /* SGQRCodeScanningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanningVC.m; sourceTree = "<group>"; };
+		F82FDD5F1EA8BB840042664C /* SGQRCodeScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanningView.h; sourceTree = "<group>"; };
+		F82FDD601EA8BB840042664C /* SGQRCodeScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanningView.m; sourceTree = "<group>"; };
+		F82FDD611EA8BB840042664C /* SGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWebView.h; sourceTree = "<group>"; };
+		F82FDD621EA8BB840042664C /* SGWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWebView.m; sourceTree = "<group>"; };
+		F82FDD641EA8BB840042664C /* SGQRCodeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeConst.h; sourceTree = "<group>"; };
+		F82FDD651EA8BB840042664C /* SGQRCodeConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeConst.m; sourceTree = "<group>"; };
+		F82FDD661EA8BB840042664C /* SGQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SGQRCode.bundle; sourceTree = "<group>"; };
+		F82FDD671EA8BB840042664C /* SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCode.h; sourceTree = "<group>"; };
+		F82FDD691EA8BB840042664C /* SGQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeTool.h; sourceTree = "<group>"; };
+		F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeTool.m; sourceTree = "<group>"; };
+		F863378E1EA84D9600C75420 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
+		F863378F1EA84D9600C75420 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
 		F8C6C6601EA5E22500CB1680 /* AttendanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C6C66D1EA5E22500CB1680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +191,8 @@
 		F824DA011EA5FBBF0098B2FE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F82FDD381EA89C420042664C /* GFCalendar */,
+				F82FDD2A1EA859170042664C /* LXActionSheet */,
 				F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */,
 				F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */,
 				F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */,
@@ -137,8 +203,145 @@
 				F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */,
 				F824DA171EA5FBBF0098B2FE /* UIView+ZUtility.h */,
 				F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */,
+				F82FDD351EA8864B0042664C /* UIImage+DZIamge.h */,
+				F82FDD361EA8864B0042664C /* UIImage+DZIamge.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		F82FDD2A1EA859170042664C /* LXActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD2B1EA859170042664C /* LXActionSheet.h */,
+				F82FDD2C1EA859170042664C /* LXActionSheet.m */,
+			);
+			path = LXActionSheet;
+			sourceTree = "<group>";
+		};
+		F82FDD2E1EA85E6E0042664C /* mainView */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD2F1EA85E8E0042664C /* DZMainViewController.h */,
+				F82FDD301EA85E8E0042664C /* DZMainViewController.m */,
+				F82FDD491EA89D110042664C /* DZDayDetailViewController.h */,
+				F82FDD4A1EA89D110042664C /* DZDayDetailViewController.m */,
+			);
+			path = mainView;
+			sourceTree = "<group>";
+		};
+		F82FDD381EA89C420042664C /* GFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD391EA89C420042664C /* GFCalendar.h */,
+				F82FDD3A1EA89C420042664C /* GFCalendarCell.h */,
+				F82FDD3B1EA89C420042664C /* GFCalendarCell.m */,
+				F82FDD3C1EA89C420042664C /* GFCalendarMonth.h */,
+				F82FDD3D1EA89C420042664C /* GFCalendarMonth.m */,
+				F82FDD3E1EA89C420042664C /* GFCalendarScrollView.h */,
+				F82FDD3F1EA89C420042664C /* GFCalendarScrollView.m */,
+				F82FDD401EA89C420042664C /* GFCalendarView.h */,
+				F82FDD411EA89C420042664C /* GFCalendarView.m */,
+				F82FDD421EA89C420042664C /* NSDate+GFCalendar.h */,
+				F82FDD431EA89C420042664C /* NSDate+GFCalendar.m */,
+			);
+			path = GFCalendar;
+			sourceTree = "<group>";
+		};
+		F82FDD571EA8BB840042664C /* SGQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD581EA8BB840042664C /* Category */,
+				F82FDD5B1EA8BB840042664C /* Controller */,
+				F82FDD5E1EA8BB840042664C /* CustomControls */,
+				F82FDD631EA8BB840042664C /* Helper */,
+				F82FDD661EA8BB840042664C /* SGQRCode.bundle */,
+				F82FDD671EA8BB840042664C /* SGQRCode.h */,
+				F82FDD681EA8BB840042664C /* Tools */,
+			);
+			path = SGQRCode;
+			sourceTree = "<group>";
+		};
+		F82FDD581EA8BB840042664C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD591EA8BB840042664C /* UIImage+SGHelper.h */,
+				F82FDD5A1EA8BB840042664C /* UIImage+SGHelper.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F82FDD5B1EA8BB840042664C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD5C1EA8BB840042664C /* SGQRCodeScanningVC.h */,
+				F82FDD5D1EA8BB840042664C /* SGQRCodeScanningVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F82FDD5E1EA8BB840042664C /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD5F1EA8BB840042664C /* SGQRCodeScanningView.h */,
+				F82FDD601EA8BB840042664C /* SGQRCodeScanningView.m */,
+				F82FDD611EA8BB840042664C /* SGWebView.h */,
+				F82FDD621EA8BB840042664C /* SGWebView.m */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		F82FDD631EA8BB840042664C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD641EA8BB840042664C /* SGQRCodeConst.h */,
+				F82FDD651EA8BB840042664C /* SGQRCodeConst.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F82FDD681EA8BB840042664C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD691EA8BB840042664C /* SGQRCodeTool.h */,
+				F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F863378A1EA84D3C00C75420 /* Work overtime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Work overtime";
+			sourceTree = "<group>";
+		};
+		F863378B1EA84D3C00C75420 /* Ask for leave */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Ask for leave";
+			sourceTree = "<group>";
+		};
+		F863378C1EA84D3C00C75420 /* Clock In */ = {
+			isa = PBXGroup;
+			children = (
+				F82FDD4C1EA8B00C0042664C /* DZClockInViewController.h */,
+				F82FDD4D1EA8B00C0042664C /* DZClockInViewController.m */,
+				F82FDD511EA8BAE90042664C /* QRCodeScanningVC.h */,
+				F82FDD521EA8BAE90042664C /* QRCodeScanningVC.m */,
+				F82FDD531EA8BAE90042664C /* ScanSuccessJumpVC.h */,
+				F82FDD541EA8BAE90042664C /* ScanSuccessJumpVC.m */,
+			);
+			path = "Clock In";
+			sourceTree = "<group>";
+		};
+		F863378D1EA84D3C00C75420 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F863378E1EA84D9600C75420 /* DZLoginViewController.h */,
+				F863378F1EA84D9600C75420 /* DZLoginViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		F8C6C6571EA5E22500CB1680 = {
@@ -180,6 +383,7 @@
 		F8C6C6631EA5E22500CB1680 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F824D9FE1EA5F8C50098B2FE /* main.m */,
 				F8C6C66C1EA5E22500CB1680 /* Main.storyboard */,
 				F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */,
 				F8C6C6711EA5E22500CB1680 /* LaunchScreen.storyboard */,
@@ -209,6 +413,7 @@
 		F8C6C6961EA5E36100CB1680 /* 3rdLib */ = {
 			isa = PBXGroup;
 			children = (
+				F82FDD571EA8BB840042664C /* SGQRCode */,
 			);
 			path = 3rdLib;
 			sourceTree = "<group>";
@@ -225,7 +430,13 @@
 			children = (
 				F824D9FC1EA5F8C50098B2FE /* AppDelegate.h */,
 				F824D9FD1EA5F8C50098B2FE /* AppDelegate.m */,
-				F824D9FE1EA5F8C50098B2FE /* main.m */,
+				F82FDD321EA861280042664C /* DZNavigationController.h */,
+				F82FDD331EA861280042664C /* DZNavigationController.m */,
+				F82FDD2E1EA85E6E0042664C /* mainView */,
+				F863378A1EA84D3C00C75420 /* Work overtime */,
+				F863378B1EA84D3C00C75420 /* Ask for leave */,
+				F863378C1EA84D3C00C75420 /* Clock In */,
+				F863378D1EA84D3C00C75420 /* Login */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -376,6 +587,7 @@
 				F8C6C6731EA5E22500CB1680 /* LaunchScreen.storyboard in Resources */,
 				F8C6C6701EA5E22500CB1680 /* Assets.xcassets in Resources */,
 				F8C6C66E1EA5E22500CB1680 /* Main.storyboard in Resources */,
+				F82FDD701EA8BB840042664C /* SGQRCode.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,14 +661,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				F824DA251EA5FBBF0098B2FE /* UIView+Extension.m in Sources */,
+				F82FDD6F1EA8BB840042664C /* SGQRCodeConst.m in Sources */,
+				F82FDD371EA8864B0042664C /* UIImage+DZIamge.m in Sources */,
+				F82FDD441EA89C420042664C /* GFCalendarCell.m in Sources */,
 				F8C6C6A01EA5E3A300CB1680 /* AFHttpClient.m in Sources */,
+				F82FDD6B1EA8BB840042664C /* UIImage+SGHelper.m in Sources */,
 				F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */,
 				F8C6C6A11EA5E3A300CB1680 /* LLURLHelper.m in Sources */,
 				F824D9F91EA5F8160098B2FE /* LLBaseHandler.m in Sources */,
+				F82FDD341EA861280042664C /* DZNavigationController.m in Sources */,
+				F82FDD461EA89C420042664C /* GFCalendarScrollView.m in Sources */,
+				F82FDD2D1EA859170042664C /* LXActionSheet.m in Sources */,
 				F824DA231EA5FBBF0098B2FE /* UIImage+Extension.m in Sources */,
+				F82FDD481EA89C420042664C /* NSDate+GFCalendar.m in Sources */,
+				F82FDD6C1EA8BB840042664C /* SGQRCodeScanningVC.m in Sources */,
+				F82FDD4B1EA89D110042664C /* DZDayDetailViewController.m in Sources */,
+				F82FDD451EA89C420042664C /* GFCalendarMonth.m in Sources */,
 				F824DA001EA5F8C50098B2FE /* main.m in Sources */,
+				F82FDD6E1EA8BB840042664C /* SGWebView.m in Sources */,
+				F82FDD311EA85E8E0042664C /* DZMainViewController.m in Sources */,
 				F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */,
+				F82FDD711EA8BB840042664C /* SGQRCodeTool.m in Sources */,
+				F82FDD561EA8BAE90042664C /* ScanSuccessJumpVC.m in Sources */,
+				F82FDD471EA89C420042664C /* GFCalendarView.m in Sources */,
+				F82FDD551EA8BAE90042664C /* QRCodeScanningVC.m in Sources */,
+				F82FDD6D1EA8BB840042664C /* SGQRCodeScanningView.m in Sources */,
 				F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */,
+				F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */,
+				F82FDD4E1EA8B00C0042664C /* DZClockInViewController.m in Sources */,
 				F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

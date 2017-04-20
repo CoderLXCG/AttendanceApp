@@ -17,7 +17,6 @@
 #else
     NSString *strBase = kkBase_url;
 #endif
-    
     switch (did) {
     }
     return nil;
