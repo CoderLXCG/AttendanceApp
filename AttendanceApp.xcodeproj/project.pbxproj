@@ -26,7 +26,6 @@
 		F82FDD471EA89C420042664C /* GFCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD411EA89C420042664C /* GFCalendarView.m */; };
 		F82FDD481EA89C420042664C /* NSDate+GFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD431EA89C420042664C /* NSDate+GFCalendar.m */; };
 		F82FDD4B1EA89D110042664C /* DZDayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD4A1EA89D110042664C /* DZDayDetailViewController.m */; };
-		F82FDD4E1EA8B00C0042664C /* DZClockInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD4D1EA8B00C0042664C /* DZClockInViewController.m */; };
 		F82FDD551EA8BAE90042664C /* QRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD521EA8BAE90042664C /* QRCodeScanningVC.m */; };
 		F82FDD561EA8BAE90042664C /* ScanSuccessJumpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD541EA8BAE90042664C /* ScanSuccessJumpVC.m */; };
 		F82FDD6B1EA8BB840042664C /* UIImage+SGHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD5A1EA8BB840042664C /* UIImage+SGHelper.m */; };
@@ -37,7 +36,9 @@
 		F82FDD701EA8BB840042664C /* SGQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F82FDD661EA8BB840042664C /* SGQRCode.bundle */; };
 		F82FDD711EA8BB840042664C /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */; };
 		F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F863378F1EA84D9600C75420 /* DZLoginViewController.m */; };
-		F8C6C66E1EA5E22500CB1680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C66C1EA5E22500CB1680 /* Main.storyboard */; };
+		F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */; };
+		F8B4F2311EA9B8140052874A /* UITextField+DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */; };
+		F8B4F2341EA9EE4E0052874A /* DZWorkOverTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F2331EA9EE4E0052874A /* DZWorkOverTimeViewController.m */; };
 		F8C6C6701EA5E22500CB1680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */; };
 		F8C6C6731EA5E22500CB1680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6C6711EA5E22500CB1680 /* LaunchScreen.storyboard */; };
 		F8C6C67E1EA5E22500CB1680 /* AttendanceAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C6C67D1EA5E22500CB1680 /* AttendanceAppTests.m */; };
@@ -105,8 +106,6 @@
 		F82FDD431EA89C420042664C /* NSDate+GFCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GFCalendar.m"; sourceTree = "<group>"; };
 		F82FDD491EA89D110042664C /* DZDayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZDayDetailViewController.h; sourceTree = "<group>"; };
 		F82FDD4A1EA89D110042664C /* DZDayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZDayDetailViewController.m; sourceTree = "<group>"; };
-		F82FDD4C1EA8B00C0042664C /* DZClockInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZClockInViewController.h; sourceTree = "<group>"; };
-		F82FDD4D1EA8B00C0042664C /* DZClockInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZClockInViewController.m; sourceTree = "<group>"; };
 		F82FDD511EA8BAE90042664C /* QRCodeScanningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanningVC.h; sourceTree = "<group>"; };
 		F82FDD521EA8BAE90042664C /* QRCodeScanningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanningVC.m; sourceTree = "<group>"; };
 		F82FDD531EA8BAE90042664C /* ScanSuccessJumpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSuccessJumpVC.h; sourceTree = "<group>"; };
@@ -127,8 +126,13 @@
 		F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeTool.m; sourceTree = "<group>"; };
 		F863378E1EA84D9600C75420 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
 		F863378F1EA84D9600C75420 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
+		F8B4F22C1EA9A7840052874A /* DZAskForLeaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZAskForLeaveViewController.h; sourceTree = "<group>"; };
+		F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZAskForLeaveViewController.m; sourceTree = "<group>"; };
+		F8B4F22F1EA9B8140052874A /* UITextField+DatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DatePicker.h"; sourceTree = "<group>"; };
+		F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DatePicker.m"; sourceTree = "<group>"; };
+		F8B4F2321EA9EE4E0052874A /* DZWorkOverTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWorkOverTimeViewController.h; sourceTree = "<group>"; };
+		F8B4F2331EA9EE4E0052874A /* DZWorkOverTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZWorkOverTimeViewController.m; sourceTree = "<group>"; };
 		F8C6C6601EA5E22500CB1680 /* AttendanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8C6C66D1EA5E22500CB1680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C6C6721EA5E22500CB1680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C6C6741EA5E22500CB1680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */,
 				F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */,
 				F824DA121EA5FBBF0098B2FE /* UIImage+Extension.m */,
+				F8B4F22F1EA9B8140052874A /* UITextField+DatePicker.h */,
+				F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */,
 				F824DA131EA5FBBF0098B2FE /* UILabel+DZAutoSize.h */,
 				F824DA141EA5FBBF0098B2FE /* UILabel+DZAutoSize.m */,
 				F824DA151EA5FBBF0098B2FE /* UIView+Extension.h */,
@@ -311,6 +317,8 @@
 		F863378A1EA84D3C00C75420 /* Work overtime */ = {
 			isa = PBXGroup;
 			children = (
+				F8B4F2321EA9EE4E0052874A /* DZWorkOverTimeViewController.h */,
+				F8B4F2331EA9EE4E0052874A /* DZWorkOverTimeViewController.m */,
 			);
 			path = "Work overtime";
 			sourceTree = "<group>";
@@ -318,6 +326,8 @@
 		F863378B1EA84D3C00C75420 /* Ask for leave */ = {
 			isa = PBXGroup;
 			children = (
+				F8B4F22C1EA9A7840052874A /* DZAskForLeaveViewController.h */,
+				F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */,
 			);
 			path = "Ask for leave";
 			sourceTree = "<group>";
@@ -325,8 +335,6 @@
 		F863378C1EA84D3C00C75420 /* Clock In */ = {
 			isa = PBXGroup;
 			children = (
-				F82FDD4C1EA8B00C0042664C /* DZClockInViewController.h */,
-				F82FDD4D1EA8B00C0042664C /* DZClockInViewController.m */,
 				F82FDD511EA8BAE90042664C /* QRCodeScanningVC.h */,
 				F82FDD521EA8BAE90042664C /* QRCodeScanningVC.m */,
 				F82FDD531EA8BAE90042664C /* ScanSuccessJumpVC.h */,
@@ -384,7 +392,6 @@
 			isa = PBXGroup;
 			children = (
 				F824D9FE1EA5F8C50098B2FE /* main.m */,
-				F8C6C66C1EA5E22500CB1680 /* Main.storyboard */,
 				F8C6C66F1EA5E22500CB1680 /* Assets.xcassets */,
 				F8C6C6711EA5E22500CB1680 /* LaunchScreen.storyboard */,
 				F8C6C6741EA5E22500CB1680 /* Info.plist */,
@@ -586,7 +593,6 @@
 			files = (
 				F8C6C6731EA5E22500CB1680 /* LaunchScreen.storyboard in Resources */,
 				F8C6C6701EA5E22500CB1680 /* Assets.xcassets in Resources */,
-				F8C6C66E1EA5E22500CB1680 /* Main.storyboard in Resources */,
 				F82FDD701EA8BB840042664C /* SGQRCode.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,6 +670,7 @@
 				F82FDD6F1EA8BB840042664C /* SGQRCodeConst.m in Sources */,
 				F82FDD371EA8864B0042664C /* UIImage+DZIamge.m in Sources */,
 				F82FDD441EA89C420042664C /* GFCalendarCell.m in Sources */,
+				F8B4F2341EA9EE4E0052874A /* DZWorkOverTimeViewController.m in Sources */,
 				F8C6C6A01EA5E3A300CB1680 /* AFHttpClient.m in Sources */,
 				F82FDD6B1EA8BB840042664C /* UIImage+SGHelper.m in Sources */,
 				F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */,
@@ -680,6 +687,8 @@
 				F824DA001EA5F8C50098B2FE /* main.m in Sources */,
 				F82FDD6E1EA8BB840042664C /* SGWebView.m in Sources */,
 				F82FDD311EA85E8E0042664C /* DZMainViewController.m in Sources */,
+				F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */,
+				F8B4F2311EA9B8140052874A /* UITextField+DatePicker.m in Sources */,
 				F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */,
 				F82FDD711EA8BB840042664C /* SGQRCodeTool.m in Sources */,
 				F82FDD561EA8BAE90042664C /* ScanSuccessJumpVC.m in Sources */,
@@ -688,7 +697,6 @@
 				F82FDD6D1EA8BB840042664C /* SGQRCodeScanningView.m in Sources */,
 				F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */,
 				F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */,
-				F82FDD4E1EA8B00C0042664C /* DZClockInViewController.m in Sources */,
 				F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,14 +733,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F8C6C66C1EA5E22500CB1680 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8C6C66D1EA5E22500CB1680 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F8C6C6711EA5E22500CB1680 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,22 +1,18 @@
 //
 //  LXActionSheet.h
-//  ActionSheet
+//  LXActionSheetDemo
 //
-//  Created by 杜仲 on 16/10/12.
-//  Copyright © 2016年 dz. All rights reserved.
+//  Created by lixiang on 14-3-10.
+//  Copyright (c) 2014年 lcolco. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class LXActionSheet;
 @protocol LXActionSheetDelegate <NSObject>
-@optional
 - (void)didClickOnButtonIndex:(NSInteger *)buttonIndex;
+@optional
 - (void)didClickOnDestructiveButton;
 - (void)didClickOnCancelButton;
-
-//点击确定是能确定是哪个actionSheet
-- (void)didClickOnSureButtonWithActionSheet:(LXActionSheet *)actionSheet;
 @end
 
 @interface LXActionSheet : UIView
