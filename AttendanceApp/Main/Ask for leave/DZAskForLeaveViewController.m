@@ -8,6 +8,8 @@
 
 #import "DZAskForLeaveViewController.h"
 #import "LXActionSheet.h"
+#import "DZAskForLeaveHandle.h"
+#import "DZLeaveTypeModel.h"
 
 @interface DZAskForLeaveViewController ()<UITextViewDelegate,UITextFieldDelegate,LXActionSheetDelegate>
 @property (nonatomic, strong) UILabel * startLabel;
@@ -32,6 +34,10 @@
 
 @property (nonatomic, strong) LXActionSheet * actionSheet;
 
+@property (nonatomic, strong) NSArray * typeArray;
+
+@property (nonatomic, copy) NSString * typeCode;
+
 @end
 
 @implementation DZAskForLeaveViewController
@@ -40,6 +46,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
+    
+    //获取请假类型数组
+    [self getAskForLeaveType];
+    
     
     UIDatePicker *picker = [[UIDatePicker alloc] init];
     picker.datePickerMode = UIDatePickerModeDateAndTime;
@@ -126,8 +136,14 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     if (textField.tag == 1002) {
-        _actionSheet = [[LXActionSheet alloc] initWithTitle:@"请假类型" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@[@"事假",@"病假",@"出差",@"其他"]];
-        [_actionSheet showInView:self.view];
+        if (self.typeArray) {
+            NSMutableArray * tempArray = [NSMutableArray arrayWithCapacity:0];
+            for (DZLeaveTypeModel * model in _typeArray) {
+                [tempArray addObject:model.typeName];
+            }
+            _actionSheet = [[LXActionSheet alloc] initWithTitle:@"请假类型" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:tempArray];
+            [_actionSheet showInView:self.view];
+        }
         return NO;
     }else
     return YES;
@@ -147,24 +163,53 @@
     self.currentDateTextField.text = [formatter stringFromDate:sender.date];
 }
 
+#pragma mark - 请假
+//  请假类型
+- (void)getAskForLeaveType
+{
+    NSDictionary * dict = @{};
+    [DZAskForLeaveHandle requestFindLeaveTypeWithParameters:dict
+                                                 Success:^(id obj) {
+                                                     WDLog(@"获取请假类型列表成功");
+                                                     if ([obj[@"status"] integerValue] == 1) {
+                                                         NSArray * tempArray = obj[@"data"][@"leaveTypes"];
+                                                         
+                                                         self.typeArray = [NSArray yy_modelArrayWithClass:[DZLeaveTypeModel class] json:tempArray];
+                                                         
+                                                     }
+                                                 } failure:^(NSError *error) {
+                                                     WDLog(@"获取请假类型列表失败");
+                                                 }];
+}
+
+//发送请假请求
 - (void)askForLeave
 {
-    //发送请假请求
+
+    NSDictionary * dict = @{@"type":_typeCode,
+                            @"startTime":_startTextfield.text,
+                            @"endTime":_endTextField.text,
+                            @"content":_reasonTextView.text
+                            };
+    [DZAskForLeaveHandle requestLeaveApplyWithParameters:dict
+                                                 Success:^(id obj) {
+                                                     if ([obj[@"status"] integerValue] == 1) {
+                                                         WDLog(@"请假成功");
+                                                         [self.navigationController popViewControllerAnimated:YES];
+                                                     }
+                                                     
+                                                 } failure:^(NSError *error) {
+     
+                                                 }];
 }
 
 #pragma mark - LxactionSheetDelegate
 - (void)didClickOnButtonIndex:(NSInteger *)buttonIndex
 {
     int number = (int)buttonIndex;
-    if (buttonIndex == 0) {
-        _typeTextField.text = @"事假";
-    }else if(number == 1) {
-        _typeTextField.text = @"病假";
-    }else if (number == 2) {
-        _typeTextField.text = @"出差";
-    }else if (number == 3) {
-        _typeTextField.text = @"其他";
-    }
+    DZLeaveTypeModel * model = self.typeArray[number];
+    _typeTextField.text = model.typeName;
+    _typeCode = model.typeCode;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView

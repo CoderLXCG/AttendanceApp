@@ -15,6 +15,9 @@
 #import <arpa/inet.h>
 #import <unistd.h>
 
+
+#import "KKUUIDManager.h"
+
 @interface AFHttpClient()
 
 @end
@@ -82,6 +85,14 @@ static AFHTTPSessionManager *manager;
     return (isReachable && !needsConnection) ? YES : NO;
 }
 
+#pragma mark - 把字典转成字符串
+- (NSString *)idObjectToJson:(id)object
+{
+    NSError *parseError = nil;
+    NSData  *jsonData = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:&parseError];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
 
 - (void)requestAFHTTPSessionWithPath:(NSString *)url
                        method:(NSInteger)method
@@ -94,10 +105,19 @@ static AFHTTPSessionManager *manager;
     AFHTTPSessionManager *manager = [AFHttpClient sharedManager];
     
     //拼接参数字典
-    NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:parameters];
-    [dict setValue:@"app" forKeyPath:@"scope"];
-    [dict setValue:kkAppVersion forKeyPath:@"app_version"];
-    [dict setValue:@"iOS" forKeyPath:@"device_platform"];
+    NSMutableDictionary * dictionary = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [dictionary setValue:@"1" forKeyPath:@"os"];
+    
+    BOOL isLogIn = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isLogIn"] boolValue];
+    if (isLogIn) {
+        [dictionary setValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"userAccount"] forKeyPath:@"userAccount"];
+    }
+    
+    [dictionary setValue:@"1241hdsahueca" forKeyPath:@"uuid"];
+    
+    NSString * valueString = [self idObjectToJson:dictionary];
+    
+    NSDictionary * dict = @{@"jsonParam":valueString};
     
     //判断网络状况（有链接：执行请求；无链接：弹出提示）
     if ([self isConnectionAvailable]) {

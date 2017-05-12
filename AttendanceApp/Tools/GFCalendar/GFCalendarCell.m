@@ -15,6 +15,8 @@
         
         [self addSubview:self.todayCircle];
         [self addSubview:self.todayLabel];
+        [self addSubview:self.workImageView];
+        [self addSubview:self.offWorkImageView];
         
     }
     
@@ -38,6 +40,26 @@
         _todayLabel.backgroundColor = [UIColor clearColor];
     }
     return _todayLabel;
+}
+
+- (UIImageView *)workImageView
+{
+    if (!_workImageView) {
+        _workImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0.15*self.height, 0.3 *self.width, 0.3*self.height)];
+        _workImageView.image = [UIImage imageNamed:@"shang"];
+        _workImageView.hidden = YES;
+    }
+    return _workImageView;
+}
+
+- (UIImageView *)offWorkImageView
+{
+    if (!_offWorkImageView) {
+        _offWorkImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0.55 * self.height, 0.3 *self.width, 0.3*self.height)];
+        _offWorkImageView.image = [UIImage imageNamed:@"xia"];
+        _offWorkImageView.hidden = YES;
+    }
+    return _offWorkImageView;
 }
 
 @end

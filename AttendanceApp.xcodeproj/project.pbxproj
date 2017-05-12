@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		30A6FEC1670A78F2979A7698 /* Pods_AttendanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B76507ED862382A5B9C5109 /* Pods_AttendanceApp.framework */; };
-		F824D9F91EA5F8160098B2FE /* LLBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F824D9F81EA5F8160098B2FE /* LLBaseHandler.m */; };
 		F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F824D9FD1EA5F8C50098B2FE /* AppDelegate.m */; };
 		F824DA001EA5F8C50098B2FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F824D9FE1EA5F8C50098B2FE /* main.m */; };
 		F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */; };
-		F824DA231EA5FBBF0098B2FE /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA121EA5FBBF0098B2FE /* UIImage+Extension.m */; };
 		F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA141EA5FBBF0098B2FE /* UILabel+DZAutoSize.m */; };
 		F824DA251EA5FBBF0098B2FE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */; };
 		F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */; };
+		F82B51A71EC587A7004328D8 /* DZAskForLeaveHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F82B51A61EC587A7004328D8 /* DZAskForLeaveHandle.m */; };
+		F82B51AA1EC592CB004328D8 /* DZLeaveTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F82B51A91EC592CB004328D8 /* DZLeaveTypeModel.m */; };
 		F82FDD2D1EA859170042664C /* LXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD2C1EA859170042664C /* LXActionSheet.m */; };
 		F82FDD311EA85E8E0042664C /* DZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD301EA85E8E0042664C /* DZMainViewController.m */; };
 		F82FDD341EA861280042664C /* DZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD331EA861280042664C /* DZNavigationController.m */; };
@@ -35,6 +35,11 @@
 		F82FDD6F1EA8BB840042664C /* SGQRCodeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD651EA8BB840042664C /* SGQRCodeConst.m */; };
 		F82FDD701EA8BB840042664C /* SGQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F82FDD661EA8BB840042664C /* SGQRCode.bundle */; };
 		F82FDD711EA8BB840042664C /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */; };
+		F834749F1EC441140091AE4F /* LLBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F834749E1EC441140091AE4F /* LLBaseHandler.m */; };
+		F83474A21EC441530091AE4F /* DZLogInHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474A11EC441530091AE4F /* DZLogInHandler.m */; };
+		F83474A41EC4474D0091AE4F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83474A31EC4474D0091AE4F /* Security.framework */; };
+		F83474A81EC4486A0091AE4F /* KKUUIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474A71EC4486A0091AE4F /* KKUUIDManager.m */; };
+		F83474AB1EC448BA0091AE4F /* KKKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474AA1EC448BA0091AE4F /* KKKeyChain.m */; };
 		F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F863378F1EA84D9600C75420 /* DZLoginViewController.m */; };
 		F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */; };
 		F8B4F2311EA9B8140052874A /* UITextField+DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */; };
@@ -68,8 +73,6 @@
 		0B76507ED862382A5B9C5109 /* Pods_AttendanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B16A87C3852F78C915E36F8 /* Pods-AttendanceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendanceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AttendanceApp/Pods-AttendanceApp.release.xcconfig"; sourceTree = "<group>"; };
 		F2A59115E113468F125EA128 /* Pods-AttendanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendanceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AttendanceApp/Pods-AttendanceApp.debug.xcconfig"; sourceTree = "<group>"; };
-		F824D9F71EA5F8160098B2FE /* LLBaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBaseHandler.h; sourceTree = "<group>"; };
-		F824D9F81EA5F8160098B2FE /* LLBaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBaseHandler.m; sourceTree = "<group>"; };
 		F824D9FA1EA5F8440098B2FE /* NotificationConsts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationConsts.h; sourceTree = "<group>"; };
 		F824D9FB1EA5F89D0098B2FE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../Main/PrefixHeader.pch; sourceTree = "<group>"; };
 		F824D9FC1EA5F8C50098B2FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,14 +80,16 @@
 		F824D9FE1EA5F8C50098B2FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Main/main.m; sourceTree = "<group>"; };
 		F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
 		F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
-		F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
-		F824DA121EA5FBBF0098B2FE /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		F824DA131EA5FBBF0098B2FE /* UILabel+DZAutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DZAutoSize.h"; sourceTree = "<group>"; };
 		F824DA141EA5FBBF0098B2FE /* UILabel+DZAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DZAutoSize.m"; sourceTree = "<group>"; };
 		F824DA151EA5FBBF0098B2FE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		F824DA161EA5FBBF0098B2FE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		F824DA171EA5FBBF0098B2FE /* UIView+ZUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZUtility.h"; sourceTree = "<group>"; };
 		F824DA181EA5FBBF0098B2FE /* UIView+ZUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZUtility.m"; sourceTree = "<group>"; };
+		F82B51A51EC587A7004328D8 /* DZAskForLeaveHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZAskForLeaveHandle.h; sourceTree = "<group>"; };
+		F82B51A61EC587A7004328D8 /* DZAskForLeaveHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZAskForLeaveHandle.m; sourceTree = "<group>"; };
+		F82B51A81EC592CB004328D8 /* DZLeaveTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLeaveTypeModel.h; sourceTree = "<group>"; };
+		F82B51A91EC592CB004328D8 /* DZLeaveTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLeaveTypeModel.m; sourceTree = "<group>"; };
 		F82FDD2B1EA859170042664C /* LXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXActionSheet.h; sourceTree = "<group>"; };
 		F82FDD2C1EA859170042664C /* LXActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXActionSheet.m; sourceTree = "<group>"; };
 		F82FDD2F1EA85E8E0042664C /* DZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMainViewController.h; sourceTree = "<group>"; };
@@ -124,6 +129,15 @@
 		F82FDD671EA8BB840042664C /* SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCode.h; sourceTree = "<group>"; };
 		F82FDD691EA8BB840042664C /* SGQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeTool.h; sourceTree = "<group>"; };
 		F82FDD6A1EA8BB840042664C /* SGQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeTool.m; sourceTree = "<group>"; };
+		F834749D1EC441140091AE4F /* LLBaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBaseHandler.h; sourceTree = "<group>"; };
+		F834749E1EC441140091AE4F /* LLBaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBaseHandler.m; sourceTree = "<group>"; };
+		F83474A01EC441530091AE4F /* DZLogInHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLogInHandler.h; sourceTree = "<group>"; };
+		F83474A11EC441530091AE4F /* DZLogInHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLogInHandler.m; sourceTree = "<group>"; };
+		F83474A31EC4474D0091AE4F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F83474A61EC4486A0091AE4F /* KKUUIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKUUIDManager.h; sourceTree = "<group>"; };
+		F83474A71EC4486A0091AE4F /* KKUUIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKUUIDManager.m; sourceTree = "<group>"; };
+		F83474A91EC448BA0091AE4F /* KKKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKKeyChain.h; sourceTree = "<group>"; };
+		F83474AA1EC448BA0091AE4F /* KKKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKKeyChain.m; sourceTree = "<group>"; };
 		F863378E1EA84D9600C75420 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
 		F863378F1EA84D9600C75420 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
 		F8B4F22C1EA9A7840052874A /* DZAskForLeaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZAskForLeaveViewController.h; sourceTree = "<group>"; };
@@ -154,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83474A41EC4474D0091AE4F /* Security.framework in Frameworks */,
 				30A6FEC1670A78F2979A7698 /* Pods_AttendanceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +202,7 @@
 		E0ABFF9FA4C4B8D5FCE7C56B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F83474A31EC4474D0091AE4F /* Security.framework */,
 				0B76507ED862382A5B9C5109 /* Pods_AttendanceApp.framework */,
 			);
 			name = Frameworks;
@@ -195,12 +211,11 @@
 		F824DA011EA5FBBF0098B2FE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F83474A51EC448580091AE4F /* UDID */,
 				F82FDD381EA89C420042664C /* GFCalendar */,
 				F82FDD2A1EA859170042664C /* LXActionSheet */,
 				F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */,
 				F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */,
-				F824DA111EA5FBBF0098B2FE /* UIImage+Extension.h */,
-				F824DA121EA5FBBF0098B2FE /* UIImage+Extension.m */,
 				F8B4F22F1EA9B8140052874A /* UITextField+DatePicker.h */,
 				F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */,
 				F824DA131EA5FBBF0098B2FE /* UILabel+DZAutoSize.h */,
@@ -314,6 +329,31 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		F834749C1EC441140091AE4F /* Handle */ = {
+			isa = PBXGroup;
+			children = (
+				F834749D1EC441140091AE4F /* LLBaseHandler.h */,
+				F834749E1EC441140091AE4F /* LLBaseHandler.m */,
+				F83474A01EC441530091AE4F /* DZLogInHandler.h */,
+				F83474A11EC441530091AE4F /* DZLogInHandler.m */,
+				F82B51A51EC587A7004328D8 /* DZAskForLeaveHandle.h */,
+				F82B51A61EC587A7004328D8 /* DZAskForLeaveHandle.m */,
+			);
+			name = Handle;
+			path = Other/Handle;
+			sourceTree = "<group>";
+		};
+		F83474A51EC448580091AE4F /* UDID */ = {
+			isa = PBXGroup;
+			children = (
+				F83474A61EC4486A0091AE4F /* KKUUIDManager.h */,
+				F83474A71EC4486A0091AE4F /* KKUUIDManager.m */,
+				F83474A91EC448BA0091AE4F /* KKKeyChain.h */,
+				F83474AA1EC448BA0091AE4F /* KKKeyChain.m */,
+			);
+			path = UDID;
+			sourceTree = "<group>";
+		};
 		F863378A1EA84D3C00C75420 /* Work overtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +368,8 @@
 			children = (
 				F8B4F22C1EA9A7840052874A /* DZAskForLeaveViewController.h */,
 				F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */,
+				F82B51A81EC592CB004328D8 /* DZLeaveTypeModel.h */,
+				F82B51A91EC592CB004328D8 /* DZLeaveTypeModel.m */,
 			);
 			path = "Ask for leave";
 			sourceTree = "<group>";
@@ -381,6 +423,7 @@
 				F8C6C6961EA5E36100CB1680 /* 3rdLib */,
 				F8C6C6971EA5E36100CB1680 /* Other */,
 				F8C6C6991EA5E36100CB1680 /* Network */,
+				F834749C1EC441140091AE4F /* Handle */,
 				F8C6C69A1EA5E36100CB1680 /* Macros */,
 				F824DA011EA5FBBF0098B2FE /* Tools */,
 				F8C6C6631EA5E22500CB1680 /* Supporting Files */,
@@ -456,7 +499,6 @@
 				F8C6C69D1EA5E3A300CB1680 /* APIConfig.h */,
 				F8C6C69E1EA5E3A300CB1680 /* LLURLHelper.h */,
 				F8C6C69F1EA5E3A300CB1680 /* LLURLHelper.m */,
-				F8C6C6A21EA5E3F000CB1680 /* Handle */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -468,15 +510,6 @@
 				F824D9FA1EA5F8440098B2FE /* NotificationConsts.h */,
 			);
 			path = Macros;
-			sourceTree = "<group>";
-		};
-		F8C6C6A21EA5E3F000CB1680 /* Handle */ = {
-			isa = PBXGroup;
-			children = (
-				F824D9F71EA5F8160098B2FE /* LLBaseHandler.h */,
-				F824D9F81EA5F8160098B2FE /* LLBaseHandler.m */,
-			);
-			path = Handle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -666,8 +699,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83474A21EC441530091AE4F /* DZLogInHandler.m in Sources */,
 				F824DA251EA5FBBF0098B2FE /* UIView+Extension.m in Sources */,
+				F82B51A71EC587A7004328D8 /* DZAskForLeaveHandle.m in Sources */,
 				F82FDD6F1EA8BB840042664C /* SGQRCodeConst.m in Sources */,
+				F83474AB1EC448BA0091AE4F /* KKKeyChain.m in Sources */,
 				F82FDD371EA8864B0042664C /* UIImage+DZIamge.m in Sources */,
 				F82FDD441EA89C420042664C /* GFCalendarCell.m in Sources */,
 				F8B4F2341EA9EE4E0052874A /* DZWorkOverTimeViewController.m in Sources */,
@@ -675,11 +711,9 @@
 				F82FDD6B1EA8BB840042664C /* UIImage+SGHelper.m in Sources */,
 				F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */,
 				F8C6C6A11EA5E3A300CB1680 /* LLURLHelper.m in Sources */,
-				F824D9F91EA5F8160098B2FE /* LLBaseHandler.m in Sources */,
 				F82FDD341EA861280042664C /* DZNavigationController.m in Sources */,
 				F82FDD461EA89C420042664C /* GFCalendarScrollView.m in Sources */,
 				F82FDD2D1EA859170042664C /* LXActionSheet.m in Sources */,
-				F824DA231EA5FBBF0098B2FE /* UIImage+Extension.m in Sources */,
 				F82FDD481EA89C420042664C /* NSDate+GFCalendar.m in Sources */,
 				F82FDD6C1EA8BB840042664C /* SGQRCodeScanningVC.m in Sources */,
 				F82FDD4B1EA89D110042664C /* DZDayDetailViewController.m in Sources */,
@@ -687,6 +721,8 @@
 				F824DA001EA5F8C50098B2FE /* main.m in Sources */,
 				F82FDD6E1EA8BB840042664C /* SGWebView.m in Sources */,
 				F82FDD311EA85E8E0042664C /* DZMainViewController.m in Sources */,
+				F834749F1EC441140091AE4F /* LLBaseHandler.m in Sources */,
+				F82B51AA1EC592CB004328D8 /* DZLeaveTypeModel.m in Sources */,
 				F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */,
 				F8B4F2311EA9B8140052874A /* UITextField+DatePicker.m in Sources */,
 				F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */,
@@ -695,6 +731,7 @@
 				F82FDD471EA89C420042664C /* GFCalendarView.m in Sources */,
 				F82FDD551EA8BAE90042664C /* QRCodeScanningVC.m in Sources */,
 				F82FDD6D1EA8BB840042664C /* SGQRCodeScanningView.m in Sources */,
+				F83474A81EC4486A0091AE4F /* KKUUIDManager.m in Sources */,
 				F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */,
 				F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */,
 				F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */,
@@ -847,6 +884,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lxcg.AttendanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -861,6 +899,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lxcg.AttendanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

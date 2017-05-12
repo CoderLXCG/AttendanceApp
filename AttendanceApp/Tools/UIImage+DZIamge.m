@@ -97,4 +97,10 @@
     return newImage;
 }
 
+
++(instancetype)resizeImgWithName:(NSString *)imgName{
+    UIImage *img = [UIImage imageNamed:imgName];
+    return [img stretchableImageWithLeftCapWidth:img.size.width * 0.5 topCapHeight:img.size.height * 0.5];
+}
+
 @end

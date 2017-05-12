@@ -17,4 +17,11 @@
 
 - (UIImage *)imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
 
+/**
+ *  自动从中间拉伸图片
+ *
+ *  @param imgName 图片名称
+ */
++(instancetype)resizeImgWithName:(NSString *)imgName;
+
 @end

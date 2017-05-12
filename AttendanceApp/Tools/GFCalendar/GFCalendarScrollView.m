@@ -222,6 +222,20 @@ static NSString *const kCellIdentifier = @"cell";
             cell.todayLabel.textColor = [UIColor darkTextColor];
             cell.userInteractionEnabled = YES;
             
+            //解析传递进来的数组字典
+            // for example  [@"19":[@"9:10",@"18:20",@"9:20"],@"20":[@"9:10",@"18:20",@"9:20"]]
+            for (NSDictionary * dict in _daysArray) {
+                for (NSString * day in dict.allKeys) {
+                    if (indexPath.row +1 == [day integerValue] + firstWeekday) {  //
+                        NSArray * temparray = dict[day];
+                        if (temparray.count >= 3) {
+                            cell.workImageView.hidden = NO;
+                            cell.offWorkImageView.hidden = NO;
+                        }
+                    }
+                }
+            }
+            
             // 标识今天
             if ((monthInfo.month == [[NSDate date] dateMonth]) && (monthInfo.year == [[NSDate date] dateYear])) {
                 if (indexPath.row == [[NSDate date] dateDay] + firstWeekday - 1) {

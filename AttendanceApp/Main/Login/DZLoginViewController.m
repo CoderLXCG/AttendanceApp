@@ -10,6 +10,8 @@
 #import "LXActionSheet.h"
 #import "DZMainViewController.h"
 #import "DZNavigationController.h"
+#import "DZLogInHandler.h"
+#import "KKUUIDManager.h"
 
 @interface DZLoginViewController ()<UITextFieldDelegate>
 
@@ -75,12 +77,38 @@
 #pragma mark - 登陆方法
 - (void)LogIn
 {
-    //登陆成功，则保存isLogin的值为true到偏好设置中。失败则为false
-    DZMainViewController * mainVc = [[DZMainViewController alloc] init];
+    NSDictionary * dict = @{
+                            @"userAccount":_tfAccount.text,
+                            @"password":_tfPassword.text
+                           };
     
-    DZNavigationController * nav = [[DZNavigationController alloc] initWithRootViewController:mainVc];
+    [DZLogInHandler requestLogInWithParameters:dict
+                                       Success:^(id obj) {
+                                           
+                                           if ([[obj objectForKey:@"status"] isEqualToString:@"0"]) {
+                                               
+                                               NSLog(@"status");
+                                               
+                                           }else if ([[obj objectForKey:@"status"] isEqualToString:@"1"]) {
+                                               
+                                               [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:@"isLogIn"];
+                                               [[NSUserDefaults standardUserDefaults] setObject:_tfAccount.text forKey:@"userAccount"];
+                                               
+                                               [[NSUserDefaults standardUserDefaults] synchronize];
+                                            
+                                               //登陆成功，则保存isLogin的值为yes到偏好设置中。失败则为no
+                                               DZMainViewController * mainVc = [[DZMainViewController alloc] init];
+                                               
+                                               DZNavigationController * nav = [[DZNavigationController alloc] initWithRootViewController:mainVc];
+                                               
+                                               self.view.window.rootViewController = nav;
+                                           }
+                                           
+                                       } failure:^(NSError *error) {
+                                           
+                                           NSLog(@"登陆失败");
+                                       }];
     
-    self.view.window.rootViewController = nav;
 }
 
 #pragma mark - 键盘弹出事件

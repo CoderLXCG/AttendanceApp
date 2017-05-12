@@ -12,4 +12,9 @@
 @property (nonatomic, strong) UIView *todayCircle; //!< 标示'今天'
 @property (nonatomic, strong) UILabel *todayLabel; //!< 标示日期（几号）
 
+
+@property (nonatomic, strong) UIImageView * workImageView; //!< 上班打卡图标
+@property (nonatomic, strong) UIImageView * offWorkImageView; //!< 下班打卡图标
+
+
 @end

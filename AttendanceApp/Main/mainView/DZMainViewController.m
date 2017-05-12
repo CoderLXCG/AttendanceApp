@@ -74,7 +74,12 @@
 - (NSMutableArray *)days
 {
     if (!_days) {
-        _days = [NSMutableArray arrayWithCapacity:0];
+//        _days = [NSMutableArray arrayWithCapacity:0];
+        _days = [NSMutableArray arrayWithArray:@[@{@"12":@[@"9:10",@"18:20",@"9:20"]},
+                                                 @{@"13":@[@"9:10",@"18:20",@"9:20"]},
+                                                 @{@"19":@[@"9:10",@"18:20",@"9:20"]},
+                                                 @{@"20":@[@"9:10",@"18:20",@"9:20"]}
+                                                 ]];
     }
     return _days;
 }
@@ -147,7 +152,7 @@
             QRCodeScanningVC *vc = [[QRCodeScanningVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         } else if (status == AVAuthorizationStatusDenied) { // 用户拒绝当前应用访问相机
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"⚠️ 警告" message:@"请去-> [设置 - 隐私 - 相机 - SGQRCodeExample] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"⚠️ 警告" message:@"请去-> [设置 - 隐私 - 相机 - 考勤] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
             UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
