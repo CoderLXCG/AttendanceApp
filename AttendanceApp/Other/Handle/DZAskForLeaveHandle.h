@@ -21,4 +21,9 @@
                                 Success:(_Nullable SuccessBlock)success
                                 failure:(_Nullable FailedBlock)failure;
 
+//请假记录getLeaveRecord
++ (void)requestGetLeaveRecordWithParameters:(NSDictionary * _Nullable)parameters
+                                    Success:(_Nullable SuccessBlock)success
+                                    failure:(_Nullable FailedBlock)failure;
+
 @end

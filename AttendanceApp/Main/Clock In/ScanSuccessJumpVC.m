@@ -9,9 +9,25 @@
 #import "ScanSuccessJumpVC.h"
 #import "SGWebView.h"
 #import "SGQRCodeConst.h"
+#import "DZClockInHandler.h"
+//定位
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import "LXActionSheet.h"
 
-@interface ScanSuccessJumpVC () <SGWebViewDelegate>
+@interface ScanSuccessJumpVC ()
+<SGWebViewDelegate,
+AMapLocationManagerDelegate,
+AMapSearchDelegate,
+LXActionSheetDelegate>
+
+
 @property (nonatomic , strong) SGWebView *webView;
+@property (nonatomic, strong) AMapLocationManager * locationManager;
+@property (nonatomic, assign) CGFloat lng;
+@property (nonatomic, assign) CGFloat lat;
+
 @end
 
 @implementation ScanSuccessJumpVC
@@ -22,11 +38,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupNavigationItem];
+    
+    //获取打卡的地址经纬度
+    [self getAddress];
    
     if (self.jump_bar_code) {
         [self setupLabel];
     } else {
-        [self setupWebView];
+//        [self setupWebView];
+        [self setupData];
     }
 }
 
@@ -78,6 +98,50 @@
     _webView.progressViewColor = [UIColor redColor];
     _webView.SGQRCodeDelegate = self;
     [self.view addSubview:_webView];
+}
+
+- (void)setupData
+{
+    //将获取到的二维码信息打卡
+    NSDictionary * dict = @{@"code":self.jump_URL,
+                            @"longitude":[NSString stringWithFormat:@"%f",_lng],//经度
+                            @"latitude":[NSString stringWithFormat:@"%f",_lat]//纬度
+                            };
+    
+    [DZClockInHandler requestClockInWithParameters:dict
+                                           Success:^(id obj) {
+        
+                                               WDLog(@"打卡成功");
+                                               
+                                               [self.navigationController popToRootViewControllerAnimated:YES];
+    
+                                           } failure:^(NSError *error) {
+        
+                                               
+    
+                                           }];
+}
+
+#pragma mark - 获取经纬度
+- (void)getAddress
+{
+    self.locationManager = [[AMapLocationManager alloc] init];
+    [self.locationManager setDelegate:self];
+    [self.locationManager setPausesLocationUpdatesAutomatically:NO];
+    
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
+    //   定位超时时间，最低2s，此处设置为2s
+    self.locationManager.locationTimeout =2;
+    //   逆地理请求超时时间，最低2s，此处设置为2s
+    self.locationManager.reGeocodeTimeout = 2;
+    // 带逆地理信息的一次定位（返回坐标和地址信息）
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
+    // 带逆地理（返回坐标和地址信息）。将下面代码中的 YES 改成 NO ，则不会返回地址信息。
+    [self.locationManager requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
+        _lng = location.coordinate.longitude;
+        _lat = location.coordinate.latitude;
+        
+            }];
 }
 
 - (void)webView:(SGWebView *)webView didFinishLoadWithURL:(NSURL *)url {

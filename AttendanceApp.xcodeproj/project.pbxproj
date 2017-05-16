@@ -41,6 +41,8 @@
 		F83474A81EC4486A0091AE4F /* KKUUIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474A71EC4486A0091AE4F /* KKUUIDManager.m */; };
 		F83474AB1EC448BA0091AE4F /* KKKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474AA1EC448BA0091AE4F /* KKKeyChain.m */; };
 		F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F863378F1EA84D9600C75420 /* DZLoginViewController.m */; };
+		F87ED04C1EC942850082A762 /* DZOverTimeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F87ED04B1EC942850082A762 /* DZOverTimeHandle.m */; };
+		F87ED04F1EC9AC280082A762 /* DZClockInHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F87ED04E1EC9AC280082A762 /* DZClockInHandler.m */; };
 		F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */; };
 		F8B4F2311EA9B8140052874A /* UITextField+DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */; };
 		F8B4F2341EA9EE4E0052874A /* DZWorkOverTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F2331EA9EE4E0052874A /* DZWorkOverTimeViewController.m */; };
@@ -140,6 +142,10 @@
 		F83474AA1EC448BA0091AE4F /* KKKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKKeyChain.m; sourceTree = "<group>"; };
 		F863378E1EA84D9600C75420 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
 		F863378F1EA84D9600C75420 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
+		F87ED04A1EC942850082A762 /* DZOverTimeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZOverTimeHandle.h; sourceTree = "<group>"; };
+		F87ED04B1EC942850082A762 /* DZOverTimeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZOverTimeHandle.m; sourceTree = "<group>"; };
+		F87ED04D1EC9AC280082A762 /* DZClockInHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZClockInHandler.h; sourceTree = "<group>"; };
+		F87ED04E1EC9AC280082A762 /* DZClockInHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZClockInHandler.m; sourceTree = "<group>"; };
 		F8B4F22C1EA9A7840052874A /* DZAskForLeaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZAskForLeaveViewController.h; sourceTree = "<group>"; };
 		F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZAskForLeaveViewController.m; sourceTree = "<group>"; };
 		F8B4F22F1EA9B8140052874A /* UITextField+DatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DatePicker.h"; sourceTree = "<group>"; };
@@ -338,6 +344,10 @@
 				F83474A11EC441530091AE4F /* DZLogInHandler.m */,
 				F82B51A51EC587A7004328D8 /* DZAskForLeaveHandle.h */,
 				F82B51A61EC587A7004328D8 /* DZAskForLeaveHandle.m */,
+				F87ED04A1EC942850082A762 /* DZOverTimeHandle.h */,
+				F87ED04B1EC942850082A762 /* DZOverTimeHandle.m */,
+				F87ED04D1EC9AC280082A762 /* DZClockInHandler.h */,
+				F87ED04E1EC9AC280082A762 /* DZClockInHandler.m */,
 			);
 			name = Handle;
 			path = Other/Handle;
@@ -725,6 +735,7 @@
 				F82B51AA1EC592CB004328D8 /* DZLeaveTypeModel.m in Sources */,
 				F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */,
 				F8B4F2311EA9B8140052874A /* UITextField+DatePicker.m in Sources */,
+				F87ED04F1EC9AC280082A762 /* DZClockInHandler.m in Sources */,
 				F824DA241EA5FBBF0098B2FE /* UILabel+DZAutoSize.m in Sources */,
 				F82FDD711EA8BB840042664C /* SGQRCodeTool.m in Sources */,
 				F82FDD561EA8BAE90042664C /* ScanSuccessJumpVC.m in Sources */,
@@ -732,6 +743,7 @@
 				F82FDD551EA8BAE90042664C /* QRCodeScanningVC.m in Sources */,
 				F82FDD6D1EA8BB840042664C /* SGQRCodeScanningView.m in Sources */,
 				F83474A81EC4486A0091AE4F /* KKUUIDManager.m in Sources */,
+				F87ED04C1EC942850082A762 /* DZOverTimeHandle.m in Sources */,
 				F824D9FF1EA5F8C50098B2FE /* AppDelegate.m in Sources */,
 				F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */,
 				F824DA261EA5FBBF0098B2FE /* UIView+ZUtility.m in Sources */,

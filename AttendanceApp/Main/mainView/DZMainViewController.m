@@ -15,6 +15,8 @@
 #import "DZDayDetailViewController.h"
 #import "DZAskForLeaveViewController.h"
 #import "DZWorkOverTimeViewController.h"
+#import "DZAskForLeaveHandle.h"
+#import "DZLogInHandler.h"
 
 @interface DZMainViewController ()<AVCapturePhotoCaptureDelegate,AVCaptureMetadataOutputObjectsDelegate>
 
@@ -96,11 +98,63 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
+    
+    //获取当前月份请假记录及获取更新
+    [self getAskForLeaveRecord];
+    [self getUpdateApp];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - 网络请求
+- (void)getAskForLeaveRecord
+{
+    //获取当前月份
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    unsigned unitFlags =  NSCalendarUnitMonth;
+    NSDateComponents *components = [calendar components:unitFlags fromDate:[NSDate date]];
+    NSInteger iCurMonth = [components month];
+    
+    
+    NSDictionary * dict = @{
+                            @"month":[NSString stringWithFormat:@"%ld",(long)iCurMonth]
+                            };
+    
+    [DZAskForLeaveHandle requestGetLeaveRecordWithParameters:dict
+                                                     Success:^(id obj) {
+                                                         
+                                                         WDLog(@"获取请假记录成功");
+                                                         
+                                                     } failure:^(NSError *error) {
+                                                         
+                                                         WDLog(@"获取请假记录失败");
+                                                         
+                                                     }];
+}
+
+
+//获取app版本信息并判断是否要更新
+- (void)getUpdateApp
+{
+    NSDictionary * dict = @{
+                            @"version":@"1.0"
+                           };
+    
+    [DZLogInHandler requestUpdateAppWithParameters:dict
+                                           Success:^(id obj) {
+        
+                                               WDLog(@"获取版本成功");
+    
+                                           } failure:^(NSError *error) {
+        
+                                               WDLog(@"获取版本失败");
+                                               
+    }];
 }
 
 #pragma mark - 按钮点击事件
@@ -151,6 +205,7 @@
         } else if (status == AVAuthorizationStatusAuthorized) { // 用户允许当前应用访问相机
             QRCodeScanningVC *vc = [[QRCodeScanningVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            
         } else if (status == AVAuthorizationStatusDenied) { // 用户拒绝当前应用访问相机
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"⚠️ 警告" message:@"请去-> [设置 - 隐私 - 相机 - 考勤] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
             UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {

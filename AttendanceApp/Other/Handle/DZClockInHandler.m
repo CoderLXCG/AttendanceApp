@@ -1,25 +1,22 @@
 //
-//  DZLogInHandler.m
+//  DZClockInHandler.m
 //  AttendanceApp
 //
-//  Created by 杜仲 on 2017/5/11.
+//  Created by 杜仲 on 2017/5/15.
 //  Copyright © 2017年 Chengdu Wangding Technology co.,LTD. All rights reserved.
 //
 
-#import "DZLogInHandler.h"
+#import "DZClockInHandler.h"
 #import "LLURLHelper.h"
 
-@implementation DZLogInHandler
+@implementation DZClockInHandler
 
-/**
- *  注册创建用户业务逻辑处理
- */
-+ (void)requestLogInWithParameters:(NSDictionary *)parameters
-                           Success:(_Nullable SuccessBlock)success
-                           failure:(_Nullable FailedBlock)failure
+//打卡签到
++ (void)requestClockInWithParameters:(NSDictionary * _Nullable)parameters
+                             Success:(_Nullable SuccessBlock)success
+                             failure:(_Nullable FailedBlock)failure
 {
-    
-    [[AFHttpClient sharedClient] requestAFHTTPSessionWithPath:[LLURLHelper geturl:kkLogIn]
+    [[AFHttpClient sharedClient] requestAFHTTPSessionWithPath:[LLURLHelper geturl:kkClockIn]
                                                        method:AFHttpRequestGet
                                                    parameters:parameters
                                                prepareExecute:nil
@@ -31,15 +28,16 @@
                                                           
                                                           failure(error);
                                                       }];
+    
+
 }
 
-//updateApp
-+ (void)requestUpdateAppWithParameters:(NSDictionary * _Nullable)parameters
-                               Success:(_Nullable SuccessBlock)success
-                               failure:(_Nullable FailedBlock)failure
+//打卡记录
++ (void)requestClockHistoryRecordWithParameters:(NSDictionary * _Nullable)parameters
+                                        Success:(_Nullable SuccessBlock)success
+                                        failure:(_Nullable FailedBlock)failure
 {
-    
-    [[AFHttpClient sharedClient] requestAFHTTPSessionWithPath:[LLURLHelper geturl:kkUpdateApp]
+    [[AFHttpClient sharedClient] requestAFHTTPSessionWithPath:[LLURLHelper geturl:kkClockInHistory]
                                                        method:AFHttpRequestGet
                                                    parameters:parameters
                                                prepareExecute:nil

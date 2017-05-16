@@ -8,6 +8,7 @@
 
 #import "DZWorkOverTimeViewController.h"
 #import "LXActionSheet.h"
+#import "DZOverTimeHandle.h"
 
 @interface DZWorkOverTimeViewController ()<UITextViewDelegate,UITextFieldDelegate>
 
@@ -121,7 +122,24 @@
 
 - (void)askForWorkOverTime
 {
-    //发送请假请求
+    //发送加班请求
+    NSDictionary * dict = @{
+                            @"startTime":_startTextfield.text,
+                            @"endTime":_endTextField.text,
+                            @"content":_reasonTextView.text
+                            };
+    
+    [DZOverTimeHandle requestOverTimeApplyWithParameters:dict
+                                                 Success:^(id obj) {
+                                                     if ([obj[@"status"] integerValue] == 1) {
+                                                         WDLog(@"加班申请成功");
+                                                         [self.navigationController popViewControllerAnimated:YES];
+                                                     }
+                                                 } failure:^(NSError *error) {
+        
+                                                     WDLog(@"加班申请失败");
+    
+                                                 }];
 }
 
 

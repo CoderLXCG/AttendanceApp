@@ -53,5 +53,23 @@
 }
 
 
+//获取请假记录
++ (void)requestGetLeaveRecordWithParameters:(NSDictionary * _Nullable)parameters
+                                    Success:(_Nullable SuccessBlock)success
+                                    failure:(_Nullable FailedBlock)failure
+{
+    [[AFHttpClient sharedClient] requestAFHTTPSessionWithPath:[LLURLHelper geturl:kkGetLeaveRecord]
+                                                       method:AFHttpRequestGet
+                                                   parameters:parameters
+                                               prepareExecute:nil
+                                                      success:^(NSURLSessionDataTask *task, id responseObject){
+                                                          
+                                                          success(responseObject);
+                                                          
+                                                      } failure:^(NSURLSessionDataTask *task, NSError *error){
+                                                          
+                                                          failure(error);
+                                                      }];
+}
 
 @end

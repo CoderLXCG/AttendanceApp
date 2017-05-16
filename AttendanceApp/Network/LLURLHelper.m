@@ -31,6 +31,10 @@
             return [strBase stringByAppendingString:@"isFirstClockIn.action"];
         case kkGetLeaveRecord: //请假记录
             return [strBase stringByAppendingString:@"getLeaveRecord.action"];
+        case kkClockIn:  //打卡
+            return [strBase stringByAppendingString:@"clockIn.action"];
+        case kkClockInHistory: //打卡记录
+            return [strBase stringByAppendingString:@"getClockHistoryRecord.action"];
  
             
     }
