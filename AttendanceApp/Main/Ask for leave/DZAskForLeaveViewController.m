@@ -10,8 +10,9 @@
 #import "LXActionSheet.h"
 #import "DZAskForLeaveHandle.h"
 #import "DZLeaveTypeModel.h"
+#import "DZActionSheet.h"
 
-@interface DZAskForLeaveViewController ()<UITextViewDelegate,UITextFieldDelegate,LXActionSheetDelegate>
+@interface DZAskForLeaveViewController ()<UITextViewDelegate,UITextFieldDelegate,LXActionSheetDelegate,DZActionSheetDelegate>
 @property (nonatomic, strong) UILabel * startLabel;
 
 @property (nonatomic, strong) UILabel * endLabel;
@@ -33,6 +34,8 @@
 @property (nonatomic, strong) UIButton * defineButton;
 
 @property (nonatomic, strong) LXActionSheet * actionSheet;
+
+@property (nonatomic, strong) DZActionSheet * dzactionSheet;
 
 @property (nonatomic, strong) NSArray * typeArray;
 
@@ -112,7 +115,7 @@
     _defineButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.height - 44 - 64, self.view.width, 44)];
     [_defineButton setBackgroundImage:[UIImage imageNamed:@"btn_qd"] forState:UIControlStateNormal];
     [_defineButton setTitle:@"确定" forState:UIControlStateNormal];
-    [_defineButton addTarget:self action:@selector(askForLeave) forControlEvents:UIControlEventTouchUpInside];
+    [_defineButton addTarget:self action:@selector(askForLeaveApply) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_defineButton];
 }
 
@@ -159,7 +162,7 @@
 - (void)pickerValueChanged:(UIDatePicker *)sender
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd HH-MM"];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     self.currentDateTextField.text = [formatter stringFromDate:sender.date];
 }
 
@@ -179,11 +182,14 @@
                                                      }
                                                  } failure:^(NSError *error) {
                                                      WDLog(@"获取请假类型列表失败");
+                                                     _dzactionSheet = [[DZActionSheet alloc] initWithTitle:@"获取请假类型列表失败" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil];
+                                                     _dzactionSheet.tag = 1003;
+                                                     [_dzactionSheet showInView:self.view];
                                                  }];
 }
 
 //发送请假请求
-- (void)askForLeave
+- (void)askForLeaveApply
 {
 
     NSDictionary * dict = @{@"type":_typeCode,
@@ -199,17 +205,29 @@
                                                      }
                                                      
                                                  } failure:^(NSError *error) {
+                                                     _dzactionSheet = [[DZActionSheet alloc] initWithTitle:@"请假失败" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil];
+                                                     _dzactionSheet.tag = 1004;
+                                                     [_dzactionSheet showInView:self.view];
      
                                                  }];
 }
 
-#pragma mark - LxactionSheetDelegate
+#pragma mark - LXActionSheetDelegate
 - (void)didClickOnButtonIndex:(NSInteger *)buttonIndex
 {
-    int number = (int)buttonIndex;
-    DZLeaveTypeModel * model = self.typeArray[number];
-    _typeTextField.text = model.typeName;
-    _typeCode = model.typeCode;
+    if (_actionSheet) {
+        int number = (int)buttonIndex;
+        DZLeaveTypeModel * model = self.typeArray[number];
+        _typeTextField.text = model.typeName;
+        _typeCode = model.typeCode;
+    }
+}
+
+- (void)didClickOnDestructiveButton
+{
+    if (_dzactionSheet) {
+        WDLog(@"知道了");
+    }
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView

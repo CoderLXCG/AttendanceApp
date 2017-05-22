@@ -12,14 +12,17 @@
 #import "DZNavigationController.h"
 #import "DZLogInHandler.h"
 #import "KKUUIDManager.h"
+#import "DZActionSheet.h"
 
-@interface DZLoginViewController ()<UITextFieldDelegate>
+@interface DZLoginViewController ()<UITextFieldDelegate,DZActionSheetDelegate>
 
 @property (nonatomic, strong) UITextField * tfAccount;
 
 @property (nonatomic, strong) UITextField * tfPassword;
 
 @property (nonatomic, strong) UIButton * logInButton;
+
+@property (nonatomic, strong) DZActionSheet * actionSheet;
 
 @end
 
@@ -88,11 +91,21 @@
                                            if ([[obj objectForKey:@"status"] isEqualToString:@"0"]) {
                                                
                                                NSLog(@"status");
+                                               _actionSheet = [[DZActionSheet alloc] initWithTitle:@"账号或密码错误，登录失败"
+                                                                                          delegate:self
+                                                                                 cancelButtonTitle:nil
+                                                                            destructiveButtonTitle:@"确定"
+                                                                                 otherButtonTitles:nil];
+                                               _actionSheet.tag = 1001;
+                                               [_actionSheet showInView:self.view];
+
                                                
                                            }else if ([[obj objectForKey:@"status"] isEqualToString:@"1"]) {
                                                
                                                [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:@"isLogIn"];
                                                [[NSUserDefaults standardUserDefaults] setObject:_tfAccount.text forKey:@"userAccount"];
+                                               
+                                               [[NSUserDefaults standardUserDefaults] setObject:obj[@"data"][@"userName"] forKey:@"userName"];
                                                
                                                [[NSUserDefaults standardUserDefaults] synchronize];
                                             
@@ -107,7 +120,16 @@
                                        } failure:^(NSError *error) {
                                            
                                            NSLog(@"登陆失败");
+                                           
+                                           _actionSheet = [[DZActionSheet alloc] initWithTitle:@"登陆失败" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"确定" otherButtonTitles:nil];
+                                           _actionSheet.tag = 1000;
+                                           [_actionSheet showInView:self.view];
                                        }];
+    
+}
+#pragma mark - 代理方法
+- (void)didClickOnDestructiveButton
+{
     
 }
 

@@ -14,17 +14,18 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-#import "LXActionSheet.h"
+#import "DZActionSheet.h"
 
 @interface ScanSuccessJumpVC ()
 <SGWebViewDelegate,
 AMapLocationManagerDelegate,
 AMapSearchDelegate,
-LXActionSheetDelegate>
+DZActionSheetDelegate>
 
 
-@property (nonatomic , strong) SGWebView *webView;
+@property (nonatomic, strong) SGWebView *webView;
 @property (nonatomic, strong) AMapLocationManager * locationManager;
+@property (nonatomic, strong) DZActionSheet * actionSheet;
 @property (nonatomic, assign) CGFloat lng;
 @property (nonatomic, assign) CGFloat lat;
 
@@ -35,18 +36,22 @@ LXActionSheetDelegate>
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [AMapServices sharedServices].apiKey = mapKey;
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupNavigationItem];
     
-    //获取打卡的地址经纬度
-    [self getAddress];
+
    
     if (self.jump_bar_code) {
-        [self setupLabel];
+//        [self setupLabel];
+        
+        //获取打卡的地址经纬度
+        [self getAddress];
     } else {
-//        [self setupWebView];
-        [self setupData];
+        [self setupWebView];
+        
     }
 }
 
@@ -94,8 +99,7 @@ LXActionSheetDelegate>
     CGFloat webViewW = SGQRCodeScreenWidth;
     CGFloat webViewH = SGQRCodeScreenHeight;
     self.webView = [SGWebView webViewWithFrame:CGRectMake(webViewX, webViewY, webViewW, webViewH)];
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.jump_URL]]];
-    _webView.progressViewColor = [UIColor redColor];
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.jump_URL]]];                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        _webView.progressViewColor = [UIColor redColor];
     _webView.SGQRCodeDelegate = self;
     [self.view addSubview:_webView];
 }
@@ -103,23 +107,31 @@ LXActionSheetDelegate>
 - (void)setupData
 {
     //将获取到的二维码信息打卡
-    NSDictionary * dict = @{@"code":self.jump_URL,
+    NSDictionary * dict = @{@"code":self.jump_bar_code,
                             @"longitude":[NSString stringWithFormat:@"%f",_lng],//经度
                             @"latitude":[NSString stringWithFormat:@"%f",_lat]//纬度
                             };
     
     [DZClockInHandler requestClockInWithParameters:dict
                                            Success:^(id obj) {
-        
-                                               WDLog(@"打卡成功");
                                                
-                                               [self.navigationController popToRootViewControllerAnimated:YES];
+                                               _actionSheet = [[DZActionSheet alloc] initWithTitle:@"打卡成功" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"确定" otherButtonTitles:nil];
+                                               
+                                               _actionSheet.tag = 1000;
+                                               [_actionSheet showInView:self.view];
+                                               WDLog(@"打卡成功");
     
                                            } failure:^(NSError *error) {
         
-                                               
+                                               WDLog(@"打卡失败");
     
                                            }];
+}
+
+#pragma mark -DZActionSheetDelegate
+- (void)didClickOnDestructiveButton
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - 获取经纬度
@@ -140,7 +152,7 @@ LXActionSheetDelegate>
     [self.locationManager requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
         _lng = location.coordinate.longitude;
         _lat = location.coordinate.latitude;
-        
+        [self setupData];
             }];
 }
 

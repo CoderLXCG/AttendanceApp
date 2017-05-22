@@ -41,6 +41,9 @@
 		F83474A81EC4486A0091AE4F /* KKUUIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474A71EC4486A0091AE4F /* KKUUIDManager.m */; };
 		F83474AB1EC448BA0091AE4F /* KKKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F83474AA1EC448BA0091AE4F /* KKKeyChain.m */; };
 		F86337901EA84D9600C75420 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F863378F1EA84D9600C75420 /* DZLoginViewController.m */; };
+		F868BF251ECAD21400317FEE /* DZActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F868BF241ECAD21400317FEE /* DZActionSheet.m */; };
+		F868BF291ECAE57000317FEE /* DZClockListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F868BF281ECAE57000317FEE /* DZClockListModel.m */; };
+		F879731A1ECC253E0011AD3A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F87973191ECC253E0011AD3A /* ProgressHUD.m */; };
 		F87ED04C1EC942850082A762 /* DZOverTimeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F87ED04B1EC942850082A762 /* DZOverTimeHandle.m */; };
 		F87ED04F1EC9AC280082A762 /* DZClockInHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F87ED04E1EC9AC280082A762 /* DZClockInHandler.m */; };
 		F8B4F22E1EA9A7840052874A /* DZAskForLeaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F22D1EA9A7840052874A /* DZAskForLeaveViewController.m */; };
@@ -142,6 +145,12 @@
 		F83474AA1EC448BA0091AE4F /* KKKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKKeyChain.m; sourceTree = "<group>"; };
 		F863378E1EA84D9600C75420 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
 		F863378F1EA84D9600C75420 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
+		F868BF231ECAD21400317FEE /* DZActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZActionSheet.h; sourceTree = "<group>"; };
+		F868BF241ECAD21400317FEE /* DZActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZActionSheet.m; sourceTree = "<group>"; };
+		F868BF271ECAE57000317FEE /* DZClockListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZClockListModel.h; sourceTree = "<group>"; };
+		F868BF281ECAE57000317FEE /* DZClockListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZClockListModel.m; sourceTree = "<group>"; };
+		F87973181ECC253E0011AD3A /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		F87973191ECC253E0011AD3A /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		F87ED04A1EC942850082A762 /* DZOverTimeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZOverTimeHandle.h; sourceTree = "<group>"; };
 		F87ED04B1EC942850082A762 /* DZOverTimeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZOverTimeHandle.m; sourceTree = "<group>"; };
 		F87ED04D1EC9AC280082A762 /* DZClockInHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZClockInHandler.h; sourceTree = "<group>"; };
@@ -217,11 +226,13 @@
 		F824DA011EA5FBBF0098B2FE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F868BF221ECAD21400317FEE /* DZActionSheet */,
 				F83474A51EC448580091AE4F /* UDID */,
-				F82FDD381EA89C420042664C /* GFCalendar */,
 				F82FDD2A1EA859170042664C /* LXActionSheet */,
 				F824DA0F1EA5FBBF0098B2FE /* UIColor+expanded.h */,
 				F824DA101EA5FBBF0098B2FE /* UIColor+expanded.m */,
+				F87973181ECC253E0011AD3A /* ProgressHUD.h */,
+				F87973191ECC253E0011AD3A /* ProgressHUD.m */,
 				F8B4F22F1EA9B8140052874A /* UITextField+DatePicker.h */,
 				F8B4F2301EA9B8140052874A /* UITextField+DatePicker.m */,
 				F824DA131EA5FBBF0098B2FE /* UILabel+DZAutoSize.h */,
@@ -252,6 +263,7 @@
 				F82FDD301EA85E8E0042664C /* DZMainViewController.m */,
 				F82FDD491EA89D110042664C /* DZDayDetailViewController.h */,
 				F82FDD4A1EA89D110042664C /* DZDayDetailViewController.m */,
+				F868BF261ECAE55400317FEE /* Model */,
 			);
 			path = mainView;
 			sourceTree = "<group>";
@@ -271,7 +283,8 @@
 				F82FDD421EA89C420042664C /* NSDate+GFCalendar.h */,
 				F82FDD431EA89C420042664C /* NSDate+GFCalendar.m */,
 			);
-			path = GFCalendar;
+			name = GFCalendar;
+			path = ../Tools/GFCalendar;
 			sourceTree = "<group>";
 		};
 		F82FDD571EA8BB840042664C /* SGQRCode */ = {
@@ -404,6 +417,24 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		F868BF221ECAD21400317FEE /* DZActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				F868BF231ECAD21400317FEE /* DZActionSheet.h */,
+				F868BF241ECAD21400317FEE /* DZActionSheet.m */,
+			);
+			path = DZActionSheet;
+			sourceTree = "<group>";
+		};
+		F868BF261ECAE55400317FEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F868BF271ECAE57000317FEE /* DZClockListModel.h */,
+				F868BF281ECAE57000317FEE /* DZClockListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F8C6C6571EA5E22500CB1680 = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +504,7 @@
 		F8C6C6961EA5E36100CB1680 /* 3rdLib */ = {
 			isa = PBXGroup;
 			children = (
+				F82FDD381EA89C420042664C /* GFCalendar */,
 				F82FDD571EA8BB840042664C /* SGQRCode */,
 			);
 			path = 3rdLib;
@@ -716,11 +748,13 @@
 				F83474AB1EC448BA0091AE4F /* KKKeyChain.m in Sources */,
 				F82FDD371EA8864B0042664C /* UIImage+DZIamge.m in Sources */,
 				F82FDD441EA89C420042664C /* GFCalendarCell.m in Sources */,
+				F879731A1ECC253E0011AD3A /* ProgressHUD.m in Sources */,
 				F8B4F2341EA9EE4E0052874A /* DZWorkOverTimeViewController.m in Sources */,
 				F8C6C6A01EA5E3A300CB1680 /* AFHttpClient.m in Sources */,
 				F82FDD6B1EA8BB840042664C /* UIImage+SGHelper.m in Sources */,
 				F824DA221EA5FBBF0098B2FE /* UIColor+expanded.m in Sources */,
 				F8C6C6A11EA5E3A300CB1680 /* LLURLHelper.m in Sources */,
+				F868BF291ECAE57000317FEE /* DZClockListModel.m in Sources */,
 				F82FDD341EA861280042664C /* DZNavigationController.m in Sources */,
 				F82FDD461EA89C420042664C /* GFCalendarScrollView.m in Sources */,
 				F82FDD2D1EA859170042664C /* LXActionSheet.m in Sources */,
@@ -741,6 +775,7 @@
 				F82FDD561EA8BAE90042664C /* ScanSuccessJumpVC.m in Sources */,
 				F82FDD471EA89C420042664C /* GFCalendarView.m in Sources */,
 				F82FDD551EA8BAE90042664C /* QRCodeScanningVC.m in Sources */,
+				F868BF251ECAD21400317FEE /* DZActionSheet.m in Sources */,
 				F82FDD6D1EA8BB840042664C /* SGQRCodeScanningView.m in Sources */,
 				F83474A81EC4486A0091AE4F /* KKUUIDManager.m in Sources */,
 				F87ED04C1EC942850082A762 /* DZOverTimeHandle.m in Sources */,
@@ -894,7 +929,7 @@
 				GCC_PREFIX_HEADER = $SRCROOT/AttendanceApp/Main/PrefixHeader.pch;
 				INFOPLIST_FILE = AttendanceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lxcg.AttendanceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwangding.attendance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -909,7 +944,7 @@
 				GCC_PREFIX_HEADER = $SRCROOT/AttendanceApp/Main/PrefixHeader.pch;
 				INFOPLIST_FILE = AttendanceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lxcg.AttendanceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwangding.attendance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -10,6 +10,8 @@
 #import "GFCalendarMonth.h"
 #import "NSDate+GFCalendar.h"
 
+#import "DZClockListModel.h"
+
 @interface GFCalendarScrollView() <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionViewL;
@@ -223,15 +225,16 @@ static NSString *const kCellIdentifier = @"cell";
             cell.userInteractionEnabled = YES;
             
             //解析传递进来的数组字典
-            // for example  [@"19":[@"9:10",@"18:20",@"9:20"],@"20":[@"9:10",@"18:20",@"9:20"]]
-            for (NSDictionary * dict in _daysArray) {
-                for (NSString * day in dict.allKeys) {
-                    if (indexPath.row +1 == [day integerValue] + firstWeekday) {  //
-                        NSArray * temparray = dict[day];
-                        if (temparray.count >= 3) {
-                            cell.workImageView.hidden = NO;
-                            cell.offWorkImageView.hidden = NO;
-                        }
+            for (DZClockListModel * model in _daysArray) {
+                
+                NSInteger dateIndex = [[model.date substringWithRange:NSMakeRange(8, 2)] integerValue];
+                
+                if (indexPath.row +1 == dateIndex + firstWeekday) {
+                    if (model.startTime) {
+                        cell.workImageView.hidden = NO;
+                    }
+                    if (model.endTime) {
+                        cell.offWorkImageView.hidden = NO;
                     }
                 }
             }

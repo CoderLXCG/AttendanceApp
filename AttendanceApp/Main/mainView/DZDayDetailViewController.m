@@ -7,6 +7,7 @@
 //
 
 #import "DZDayDetailViewController.h"
+#import "DZClockListModel.h"
 
 #define FONT 16
 @interface DZDayDetailViewController ()
@@ -18,6 +19,9 @@
 @property (nonatomic, strong) UILabel * askForLeaveLabel;
 @property (nonatomic, strong) UILabel * askForLeaveTimeLabel;
 
+@property (nonatomic, copy) NSString * startTime;
+@property (nonatomic, copy) NSString * endTime;
+
 @end
 
 @implementation DZDayDetailViewController
@@ -26,6 +30,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    for (DZClockListModel * model in _array) {
+        if ([[model.date substringWithRange:NSMakeRange(8, 2)] integerValue] == _day) {
+            _startTime = model.startTime;
+            _endTime = model.endTime;
+        }
+    }
     
     _startLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 50, 120, 30)];
     _startLabel.font = [UIFont systemFontOfSize:FONT];
@@ -40,15 +51,15 @@
     
     
     
-    _endLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 50, 150, 30)];
-    _endLabel.font = [UIFont systemFontOfSize:FONT];
-    _endLabel.text = @"9:07";
-    [self.view addSubview:_endLabel];
+    _startTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 50, self.view.width - 150, 30)];
+    _startTimeLabel.font = [UIFont systemFontOfSize:FONT];
+    _startTimeLabel.text = _startTime?_startTime:@"";
+    [self.view addSubview:_startTimeLabel];
     
-    _endLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, 150, 30)];
-    _endLabel.font = [UIFont systemFontOfSize:FONT];
-    _endLabel.text = @"18:00";
-    [self.view addSubview:_endLabel];
+    _endTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, self.view.width - 150, 30)];
+    _endTimeLabel.font = [UIFont systemFontOfSize:FONT];
+    _endTimeLabel.text = _endTime?_endTime:@"";
+    [self.view addSubview:_endTimeLabel];
     
     
     
@@ -57,9 +68,9 @@
     _askForLeaveLabel.text = @"请假时间:";
     [self.view addSubview:_askForLeaveLabel];
     
-    _askForLeaveTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 150, 150, 30)];
+    _askForLeaveTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 150, self.view.width - 150, 30)];
     _askForLeaveTimeLabel.font = [UIFont systemFontOfSize:FONT];
-    _askForLeaveTimeLabel.text = @"9:00 - 12:00";
+    _askForLeaveTimeLabel.text = @"";
     [self.view addSubview:_askForLeaveTimeLabel];
 }
 

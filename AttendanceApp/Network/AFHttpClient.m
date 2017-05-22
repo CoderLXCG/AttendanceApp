@@ -54,6 +54,7 @@ static AFHTTPSessionManager *manager;
         manager.requestSerializer  = [AFJSONRequestSerializer serializer];
         [manager.requestSerializer setValue:[[NSUUID UUID] UUIDString] forHTTPHeaderField:@"x-device-id"];
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
     });
     return manager;

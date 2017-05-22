@@ -7,10 +7,10 @@
 //
 
 #import "DZWorkOverTimeViewController.h"
-#import "LXActionSheet.h"
 #import "DZOverTimeHandle.h"
+#import "DZActionSheet.h"
 
-@interface DZWorkOverTimeViewController ()<UITextViewDelegate,UITextFieldDelegate>
+@interface DZWorkOverTimeViewController ()<UITextViewDelegate,UITextFieldDelegate,DZActionSheetDelegate>
 
 @property (nonatomic, strong) UILabel * startLabel;
 
@@ -32,6 +32,8 @@
 
 @property (nonatomic, strong) UIButton * defineButton;
 
+@property (nonatomic, strong) DZActionSheet * actonSheet;
+
 @end
 
 @implementation DZWorkOverTimeViewController
@@ -43,7 +45,7 @@
     
     UIDatePicker *picker = [[UIDatePicker alloc] init];
     picker.datePickerMode = UIDatePickerModeDateAndTime;
-    [picker setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"zh_Hans_CN"]];
+    [picker setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_Hans_CN"]];
     [picker addTarget:self action:@selector(pickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     self.startTextfield.inputView = picker;
     self.endTextField.inputView = picker;
@@ -116,12 +118,15 @@
 - (void)pickerValueChanged:(UIDatePicker *)sender
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd HH-MM"];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     self.currentDateTextField.text = [formatter stringFromDate:sender.date];
 }
 
 - (void)askForWorkOverTime
 {
+    
+
+    
     //发送加班请求
     NSDictionary * dict = @{
                             @"startTime":_startTextfield.text,
@@ -138,6 +143,14 @@
                                                  } failure:^(NSError *error) {
         
                                                      WDLog(@"加班申请失败");
+                                                     
+                                                     _actonSheet = [[DZActionSheet alloc] initWithTitle:@"加班申请失败"
+                                                                                               delegate:self
+                                                                                      cancelButtonTitle:nil
+                                                                                 destructiveButtonTitle:@"确定"
+                                                                                      otherButtonTitles:nil];
+                                                     _actonSheet.tag = 1002;
+                                                     [_actonSheet showInView:self.view];
     
                                                  }];
 }
@@ -167,6 +180,14 @@
     self.view.frame = CGRectMake(0, 64, self.view.width, self.view.height);
     
     [UIView commitAnimations];
+}
+
+#pragma mark - DZActionSheetDelegate
+- (void)didClickOnDestructiveButton
+{
+    if (_actonSheet.tag == 1002) {
+        WDLog(@"知道了");
+    }
 }
 
 @end

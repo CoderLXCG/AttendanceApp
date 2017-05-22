@@ -26,9 +26,9 @@
         case kkFindLeaveType: //请假类型
             return [strBase stringByAppendingString:@"findLeaveType.action"];
         case kkLeaveApply:  //请假
-            return [strBase stringByAppendingString:@"getLeaveRecord.action"];
+            return [strBase stringByAppendingString:@"leaveApply.action"];
         case kkOverTimeApply: //加班申请
-            return [strBase stringByAppendingString:@"isFirstClockIn.action"];
+            return [strBase stringByAppendingString:@"overtimeApply.action"];
         case kkGetLeaveRecord: //请假记录
             return [strBase stringByAppendingString:@"getLeaveRecord.action"];
         case kkClockIn:  //打卡

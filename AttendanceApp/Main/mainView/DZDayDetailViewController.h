@@ -10,4 +10,8 @@
 
 @interface DZDayDetailViewController : UIViewController
 
+@property (nonatomic, strong) NSArray * array;
+
+@property (nonatomic, assign) NSInteger day;
+
 @end

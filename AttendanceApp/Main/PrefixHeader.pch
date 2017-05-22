@@ -31,7 +31,7 @@
 #endif
 
 //高德地图key
-#define mapKey @"c2b349d857ab2a84fa374f4d9430cdaa"
+#define mapKey @"dc93b79d6231888ac1b11caadd932925"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
